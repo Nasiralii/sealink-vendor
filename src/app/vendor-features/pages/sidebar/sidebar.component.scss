@@ -1,0 +1,63 @@
+:host ::ng-deep {
+    .vender-sidebar {
+        display: block;
+        width: 250px !important;
+        padding: 16px;
+        border-right: 1px solid #dbdde3;
+        background: white;
+        .nav-link-sidebar {
+            margin-bottom: 20px;
+            list-style-type: none;
+            gap: 6px;
+            padding-left: 27px;
+        }
+
+        .p-button {
+            font-size: 12px;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .p-accordion-toggle-icon {
+            order: 1;
+        }
+
+        .p-accordion .p-accordion-header .p-accordion-header-link {
+            padding: 0px;
+            border: 0px;
+            background: transparent !important;
+        }
+
+        .p-accordion
+            .p-accordion-header:not(.p-disabled).p-highlight:hover
+            .p-accordion-header-link {
+            border-color: transparent;
+            background: transparent !important;
+            color: #000;
+        }
+
+        .p-accordion
+            .p-accordion-header:not(.p-disabled)
+            .p-accordion-header-link:focus {
+            box-shadow: unset;
+        }
+
+        .p-accordion p-accordiontab .p-accordion-content {
+            border: 0px;
+        }
+    }
+}
+.sub-menu {
+    position: relative;
+    top: -10px;
+}
+
+
+.log-out {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    background-color: white;
+    padding: 10px; 
+    cursor: pointer;
+  } 

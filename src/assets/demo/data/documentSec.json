@@ -1,0 +1,38 @@
+{
+    "data": [
+        {
+            "id": 1000,
+            "DocumentType": "Aadar Card",
+            "DocumentTitle": "Aadar Card",
+            "ReferenceNumber":"145689",
+            "ExpiryDate":"12/03/20011",
+            "IssuedDate":"12/03/2026",
+            "UploadedFile":"Aadar Card.pdf",
+            "Remarks":"The formatting..."
+          
+        }, {
+            "id": 2000,
+            "DocumentType": "PAN card",
+            "DocumentTitle": "PAN card",
+            "ReferenceNumber":"145689",
+            "ExpiryDate":"12/03/20011",
+            "IssuedDate":"12/03/2026",
+            "UploadedFile":"PAN card.pdf",
+            "Remarks":"The formatting..."
+          
+        }, {
+            "id": 3000,
+            "DocumentType": "Passport",
+            "DocumentTitle": "Passport",
+            "ReferenceNumber":"145689",
+            "ExpiryDate":"12/03/20011",
+            "IssuedDate":"12/03/2026",
+            "UploadedFile":"Passport.pdf",
+            "Remarks":"The formatting..."
+          
+        }
+    
+    
+    ]
+  }
+  

@@ -1,0 +1,39 @@
+.table-section th,
+.table-section td {
+    padding: 1.2rem 0.8rem !important;
+}
+
+.table-section th {
+    color: #000 !important;
+}
+
+.table-section td {
+    color: #4A4E56 !important;
+}
+
+.add-button {
+    border-radius: 7px;
+    color: white;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(87, 116, 241, 0.9647058824);
+    border: 1px solid #f3f3f3;
+    padding: 8px 12px;
+    white-space: nowrap;
+}
+
+/*
+svg {
+    margin-right: 5px;
+} */
+
+.p-datepicker {
+    z-index: 999999999 !important;
+}
+
+.p-toast,
+.p-toast .p-toast-message {
+    z-index: 99999999999999 !important;
+}

@@ -1,0 +1,83 @@
+<div class="vender-login-main">
+<div class="login-welcome-col">
+    <div class="login-col">
+<div class="vender-login-title d-flex flex-column align-items-center justify-content-center">
+    <img class="mb-4" src="/assets/images/logo.svg"/>
+<h2 class="m-2 font-bold">Welcome to SeaLink!</h2>
+<p class="m-0" style="">Enter your email & password to continue</p>
+</div>
+
+<div class="vender-login-form w-full d-flex flex-column align-items-start">
+    <div class="">
+        <label class="mb-2 d-block font-semibold">Email Address</label>
+        <div class="input-field">
+            <i class="pi pi-envelope" style="font-size: 20px;color: #7C7C7D"></i>
+            <input type="text" pInputText placeholder="Enter your email address"/>
+        </div>
+    </div>
+
+    <div class="">
+        <label class="mb-2 d-block font-semibold">Password</label>
+        <div class="input-field">
+            <i class="pi pi-lock" style="font-size: 20px;color: #7C7C7D"></i>
+            <input type="password" pInputText placeholder="Enter your password"/>
+        </div>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-between">
+        <form class="d-flex align-items-center gap-1" [formGroup]="formGroup">
+            <p-checkbox 
+                formControlName="city" 
+                value="New York" 
+                inputId="ny" />
+            <label for="ny" style="color: #7C7C7D">Remember me</label>
+        </form>
+        <p class="mb-0 font-medium">Forgot password?</p>
+    </div>
+
+    <p-button class="w-full" label="Submit" />
+
+    <div class="d-flex social-btn align-items-center justify-content-between">
+        <p-button style="width: 49%" class="" label="Submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <path d="M21.0282 12.9383C21.0282 12.1983 20.967 11.6583 20.8344 11.0983H12.2119V14.4383H17.2731C17.1711 15.2683 16.6201 16.5183 15.3956 17.3583L15.3784 17.4701L18.1047 19.5399L18.2935 19.5583C20.0282 17.9884 21.0282 15.6783 21.0282 12.9383Z" fill="#4285F4"/>
+                <path d="M12.2117 21.7383C14.6912 21.7383 16.7729 20.9383 18.2932 19.5583L15.3953 17.3582C14.6198 17.8883 13.579 18.2583 12.2117 18.2583C9.78311 18.2583 7.7219 16.6884 6.98714 14.5183L6.87944 14.5273L4.04464 16.6773L4.00757 16.7783C5.51775 19.7183 8.61979 21.7383 12.2117 21.7383Z" fill="#34A853"/>
+                <path d="M6.98697 14.5183C6.79309 13.9583 6.68089 13.3582 6.68089 12.7383C6.68089 12.1182 6.79309 11.5183 6.97677 10.9583L6.97164 10.839L4.10131 8.65445L4.0074 8.69823C3.38498 9.91824 3.02783 11.2883 3.02783 12.7383C3.02783 14.1883 3.38498 15.5582 4.0074 16.7783L6.98697 14.5183Z" fill="#FBBC05"/>
+                <path d="M12.2117 7.21827C13.9361 7.21827 15.0993 7.94826 15.7627 8.55831L18.3545 6.07828C16.7627 4.62829 14.6912 3.73828 12.2117 3.73828C8.61979 3.73828 5.51775 5.75827 4.00757 8.69826L6.97694 10.9583C7.7219 8.78829 9.78311 7.21827 12.2117 7.21827Z" fill="#EB4335"/>
+                </svg>
+        </p-button>
+        <p-button style="width: 49%" class="" label="Submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <g clip-path="url(#clip0_2109_3547)">
+                <path d="M18.3628 19.0773H15.6978V14.9003C15.6978 13.9043 15.6778 12.6223 14.3078 12.6223C12.9188 12.6223 12.7068 13.7063 12.7068 14.8273V19.0773H10.0408V10.4883H12.6008V11.6583H12.6358C12.9938 10.9843 13.8638 10.2713 15.1638 10.2713C17.8638 10.2713 18.3638 12.0493 18.3638 14.3623V19.0773H18.3628ZM7.03083 9.31328C6.82739 9.31354 6.62589 9.27365 6.4379 9.19589C6.2499 9.11812 6.0791 9.00402 5.93529 8.86012C5.79148 8.71621 5.67748 8.54534 5.59984 8.35729C5.5222 8.16925 5.48244 7.96773 5.48283 7.76428C5.48303 7.45812 5.57401 7.15888 5.74427 6.90443C5.91453 6.64997 6.15643 6.45172 6.43936 6.33473C6.7223 6.21775 7.03357 6.1873 7.33381 6.24722C7.63406 6.30715 7.90979 6.45476 8.12614 6.67139C8.34249 6.88802 8.48975 7.16394 8.54928 7.46426C8.60882 7.76458 8.57796 8.07581 8.46061 8.3586C8.34327 8.64138 8.1447 8.88302 7.89002 9.05295C7.63535 9.22288 7.336 9.31348 7.02983 9.31328H7.03083ZM8.36683 19.0773H5.69383V10.4883H8.36783V19.0773H8.36683ZM19.6978 3.73828H4.35683C3.62083 3.73828 3.02783 4.31828 3.02783 5.03528V20.4413C3.02783 21.1583 3.62183 21.7383 4.35583 21.7383H19.6938C20.4278 21.7383 21.0278 21.1583 21.0278 20.4413V5.03528C21.0278 4.31828 20.4278 3.73828 19.6938 3.73828H19.6968H19.6978Z" fill="#0077B5"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_2109_3547">
+                <rect width="24" height="24" fill="white" transform="translate(0.027832 0.738281)"/>
+                </clipPath>
+                </defs>
+                </svg>
+        </p-button>
+
+        </div>
+
+        <p class="resgiter-link">Don’t have an account? <span class="" style="color: #5C78F1">Register</span></p>
+
+
+</div>
+</div>
+</div>
+
+<div class="about-vender-login text-white">
+    <p-carousel [value]="carouselData" [numVisible]="1" [circular]="true" [autoplayInterval]="3000">
+        <ng-template pTemplate="item" let-carousel>
+            <div class="car-item text-center" >
+                
+                <h1 class="car-title">{{ carousel.title }}</h1>
+                <p>{{ carousel.desc }}</p>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>
+
+</div>

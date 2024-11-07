@@ -1,0 +1,240 @@
+<div class="register-main">
+
+    <div class="register-main-col">
+<span class="d-flex align-items-center mb-4 back-btn" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="8" viewBox="0 0 6 8" fill="none">
+    <path d="M2.62808 4L5.73934 7.11125L4.85059 8L0.850586 4L4.85059 0L5.73934 0.888749L2.62808 4Z" fill="black"/>
+    </svg>
+    Back
+</span>
+
+<img class="w-full" src="/assets/images/register-bg.svg"/>
+
+<div class="register-form bg-white p-4">
+<h3>Registration Form</h3>
+
+<div class=" flex flex-column mb-4" style="gap: 10px">
+    <label class="label">Contact Type <span style="color: #E43628">*</span></label>
+   
+        <div class="flex flex-wrap" style="gap: 17px">
+            <div class="flex align-items-center custom-radio-btn">
+                <p-radioButton 
+                    name="Company" 
+                    value="Company" 
+                    [(ngModel)]="type" 
+                    inputId="ingredient1"
+                    
+                    (onClick)="companyRegistration()"
+                     />
+                <label for="ingredient1" class="ml-2">
+                    Company
+                </label>
+            </div>
+            
+            <div class="flex align-items-center custom-radio-btn">
+                <p-radioButton 
+                    name="Individual" 
+                    value="Individual" 
+                    [(ngModel)]="type" 
+                    inputId="ingredient2" (onClick)="individualRegistration()"/>
+                <label for="ingredient2" class="ml-2">
+                    Individual
+                </label>
+            </div>
+    </div>
+
+
+</div>
+
+<div *ngIf="company== true">
+<div class="grid col-12 px-0">
+<div class="col-12 lg:col-3">
+    <div class=" flex flex-column " style="gap: 10px">
+        <label class="label">Name <span style="color: #E43628">*</span></label>
+        <input type="text" pInputText placeholder=""/>
+    </div>
+</div>
+
+<div class="col-12 lg:col-3">
+    <div class=" flex flex-column multi-input" style="gap: 10px">
+        <label class="label">Work Contact Number <span style="color: #E43628">*</span></label>
+        <div class=" d-flex">
+            <p-dropdown 
+            [options]="Contacts" 
+            [(ngModel)]="selectedContact" 
+            optionLabel="name"
+            placeholder="CC" />
+        <input type="text" pInputText placeholder=""/>
+    </div>
+    </div>
+</div>
+
+<div class="col-12 lg:col-3 ">
+    <div class=" flex flex-column icon-field" style="gap: 10px">
+        <label class="label">Official Email <span style="color: #E43628">*</span></label>
+        <div class="">
+            <span class="envelope-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                    <path d="M3.68392 3H18.6839C19.1442 3 19.5173 3.3731 19.5173 3.83333V17.1667C19.5173 17.6269 19.1442 18 18.6839 18H3.68392C3.22369 18 2.85059 17.6269 2.85059 17.1667V3.83333C2.85059 3.3731 3.22369 3 3.68392 3ZM17.8506 6.5316L11.2438 12.4483L4.51725 6.51328V16.3333H17.8506V6.5316ZM4.94347 4.66667L11.2355 10.2183L17.4348 4.66667H4.94347Z" fill="#161719"/>
+                    </svg>
+            </span>
+        <input type="text" pInputText placeholder=""/>
+    </div>
+    </div>
+</div>
+
+</div>
+
+<div class="grid col-12 px-0">
+    <div class="col-12 lg:col-3">
+        <div class=" flex flex-column " style="gap: 10px">
+            <label class="label">Currency <span style="color: #E43628">*</span></label>
+            <p-dropdown 
+            [options]="Currency" 
+            [(ngModel)]="selectedCurrency" 
+            optionLabel="name"
+            placeholder="Select Currency" />
+       
+        </div>
+    </div>
+    
+    <div class="col-12 lg:col-3">
+        <div class=" flex flex-column " style="gap: 10px">
+            <label class="label">Source of Supply <span style="color: #E43628">*</span></label>
+                <p-dropdown 
+                [options]="Supply" 
+                [(ngModel)]="selectedSupply" 
+                optionLabel="name"
+                placeholder="Choose Source of Supply" />
+        </div>
+    </div>
+    
+    <div class="col-12 lg:col-3 ">
+        <div class=" flex flex-column" style="gap: 10px">
+            <label class="label">Identification Doc <span style="color: #E43628">*</span></label>
+            
+                        <div class="fileUpload">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                <path d="M7.1215 21.3332C5.53817 21.3332 4.18747 20.788 3.06942 19.6978C1.95136 18.6005 1.39233 17.2637 1.39233 15.6873C1.39233 14.3332 1.79858 13.1248 2.61108 12.0623C3.43053 10.9998 4.49997 10.3228 5.81942 10.0311C6.25692 8.43386 7.12497 7.1422 8.42358 6.15609C9.72914 5.16303 11.2048 4.6665 12.8507 4.6665C14.8854 4.6665 16.6076 5.37484 18.0173 6.7915C19.434 8.20123 20.1423 9.92345 20.1423 11.9582C21.3437 12.0971 22.3368 12.6179 23.1215 13.5207C23.9132 14.4096 24.309 15.4512 24.309 16.6457C24.309 17.9512 23.8541 19.0589 22.9444 19.9686C22.0347 20.8783 20.9271 21.3332 19.6215 21.3332H13.8923C13.3229 21.3332 12.8333 21.1283 12.4236 20.7186C12.0139 20.3158 11.809 19.8262 11.809 19.2498V13.8853L10.1423 15.4998L8.684 14.0415L12.8507 9.87484L17.0173 14.0415L15.559 15.4998L13.8923 13.8853V19.2498H19.6215C20.3507 19.2498 20.9653 18.9964 21.4653 18.4894C21.9722 17.9894 22.2257 17.3748 22.2257 16.6457C22.2257 15.9165 21.9722 15.3019 21.4653 14.8019C20.9653 14.295 20.3507 14.0415 19.6215 14.0415H18.059V11.9582C18.059 10.5207 17.5521 9.2915 16.5382 8.27067C15.5243 7.25678 14.2951 6.74984 12.8507 6.74984C11.4132 6.74984 10.184 7.25678 9.16317 8.27067C8.14928 9.2915 7.64233 10.5207 7.64233 11.9582H7.1215C6.11456 11.9582 5.25692 12.3158 4.54858 13.0311C3.83331 13.7394 3.47567 14.5971 3.47567 15.604C3.47567 16.6109 3.83331 17.479 4.54858 18.2082C5.25692 18.9026 6.11456 19.2498 7.1215 19.2498H9.72567V21.3332" fill="#565A5E"/>
+                                </svg>
+                            <span>Upload</span>
+                            <input type="file" class="inputfile" />
+                        </div>
+        </div>
+    </div>
+    
+    </div>
+
+    <div class="grid col-12 px-0 d-flex justify-content-end">
+        <div class="footer-btn d-flex align-items-center justify-content-end gap-3">
+<p-button label="Send"/>
+<p-button class="cancel-btn" label="Cancel"/>
+</div>
+    </div>
+
+</div>
+
+<div *ngIf="individual == true">
+    <div class="grid col-12 px-0">
+    <div class="col-12 lg:col-3">
+        <div class=" flex flex-column " style="gap: 10px">
+            <label class="label">Name <span style="color: #E43628">*</span></label>
+            <input type="text" pInputText placeholder=""/>
+        </div>
+    </div>
+    
+    <div class="col-12 lg:col-3">
+        <div class=" flex flex-column multi-input" style="gap: 10px">
+            <label class="label">Work Contact Number <span style="color: #E43628">*</span></label>
+            <div class=" d-flex">
+                <p-dropdown 
+                [options]="Contacts" 
+                [(ngModel)]="selectedContact" 
+                optionLabel="name"
+                placeholder="CC" />
+            <input type="text" pInputText placeholder=""/>
+        </div>
+        </div>
+    </div>
+    
+    <div class="col-12 lg:col-3 ">
+        <div class=" flex flex-column icon-field" style="gap: 10px">
+            <label class="label">Official Email <span style="color: #E43628">*</span></label>
+            <div class="">
+                <span class="envelope-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                        <path d="M3.68392 3H18.6839C19.1442 3 19.5173 3.3731 19.5173 3.83333V17.1667C19.5173 17.6269 19.1442 18 18.6839 18H3.68392C3.22369 18 2.85059 17.6269 2.85059 17.1667V3.83333C2.85059 3.3731 3.22369 3 3.68392 3ZM17.8506 6.5316L11.2438 12.4483L4.51725 6.51328V16.3333H17.8506V6.5316ZM4.94347 4.66667L11.2355 10.2183L17.4348 4.66667H4.94347Z" fill="#161719"/>
+                        </svg>
+                </span>
+            <input type="text" pInputText placeholder=""/>
+        </div>
+        </div>
+    </div>
+    
+    </div>
+    
+    <div class="grid col-12 px-0">
+        <div class="col-12 lg:col-3">
+            <div class=" flex flex-column " style="gap: 10px">
+                <label class="label">Company  <span style="color: #E43628">*</span></label>
+                <input type="text" pInputText placeholder="Company Name"/>
+            </div>
+        </div>
+
+        <div class="col-12 lg:col-3">
+            <div class=" flex flex-column " style="gap: 10px">
+                <label class="label">Currency <span style="color: #E43628">*</span></label>
+                <p-dropdown 
+                [options]="Currency" 
+                [(ngModel)]="selectedCurrency" 
+                optionLabel="name"
+                placeholder="Select Currency" />
+           
+            </div>
+        </div>
+        
+        <div class="col-12 lg:col-3">
+            <div class=" flex flex-column " style="gap: 10px">
+                <label class="label">Source of Supply <span style="color: #E43628">*</span></label>
+                    <p-dropdown 
+                    [options]="Supply" 
+                    [(ngModel)]="selectedSupply" 
+                    optionLabel="name"
+                    placeholder="Choose Source of Supply" />
+            </div>
+        </div>
+        
+        
+        
+        </div>
+
+        <div class="grid col-12 px-0">
+            <div class="col-12 lg:col-3 ">
+                <div class=" flex flex-column" style="gap: 10px">
+                    <label class="label">Identification Doc <span style="color: #E43628">*</span></label>
+                    
+                                <div class="fileUpload">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                        <path d="M7.1215 21.3332C5.53817 21.3332 4.18747 20.788 3.06942 19.6978C1.95136 18.6005 1.39233 17.2637 1.39233 15.6873C1.39233 14.3332 1.79858 13.1248 2.61108 12.0623C3.43053 10.9998 4.49997 10.3228 5.81942 10.0311C6.25692 8.43386 7.12497 7.1422 8.42358 6.15609C9.72914 5.16303 11.2048 4.6665 12.8507 4.6665C14.8854 4.6665 16.6076 5.37484 18.0173 6.7915C19.434 8.20123 20.1423 9.92345 20.1423 11.9582C21.3437 12.0971 22.3368 12.6179 23.1215 13.5207C23.9132 14.4096 24.309 15.4512 24.309 16.6457C24.309 17.9512 23.8541 19.0589 22.9444 19.9686C22.0347 20.8783 20.9271 21.3332 19.6215 21.3332H13.8923C13.3229 21.3332 12.8333 21.1283 12.4236 20.7186C12.0139 20.3158 11.809 19.8262 11.809 19.2498V13.8853L10.1423 15.4998L8.684 14.0415L12.8507 9.87484L17.0173 14.0415L15.559 15.4998L13.8923 13.8853V19.2498H19.6215C20.3507 19.2498 20.9653 18.9964 21.4653 18.4894C21.9722 17.9894 22.2257 17.3748 22.2257 16.6457C22.2257 15.9165 21.9722 15.3019 21.4653 14.8019C20.9653 14.295 20.3507 14.0415 19.6215 14.0415H18.059V11.9582C18.059 10.5207 17.5521 9.2915 16.5382 8.27067C15.5243 7.25678 14.2951 6.74984 12.8507 6.74984C11.4132 6.74984 10.184 7.25678 9.16317 8.27067C8.14928 9.2915 7.64233 10.5207 7.64233 11.9582H7.1215C6.11456 11.9582 5.25692 12.3158 4.54858 13.0311C3.83331 13.7394 3.47567 14.5971 3.47567 15.604C3.47567 16.6109 3.83331 17.479 4.54858 18.2082C5.25692 18.9026 6.11456 19.2498 7.1215 19.2498H9.72567V21.3332" fill="#565A5E"/>
+                                        </svg>
+                                    <span>Upload</span>
+                                    <input type="file" class="inputfile" />
+                                </div>
+                </div>
+            </div>
+                </div>
+    
+        <div class="grid col-12 px-0 d-flex justify-content-end">
+            <div class="footer-btn d-flex align-items-center justify-content-end gap-3">
+    <p-button label="Send"/>
+    <p-button class="cancel-btn" label="Cancel"/>
+    </div>
+        </div>
+    
+    </div>
+
+
+</div>
+
+    </div>
+</div>

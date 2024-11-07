@@ -1,0 +1,59 @@
+{
+    "data": [
+        {
+            "key": "0",
+            "label": "Workspace",
+            "data": "Documents Folder",
+            "icon": "pi pi-fw pi-inbox",
+            "children": [{
+                "key": "0-0",
+                "label": "Work",
+                "data": "Work Folder",
+                "icon": "pi pi-fw pi-stop-circle SecShi",
+                "children": [],
+                "Direct Link": "https://www.google.com"
+            },
+            {
+                "key": "0-1",
+                "label": "List",
+                "data": "Work Folder",
+                "icon": "pi pi-fw pi-angle-right",
+                "children": [],
+                "Direct Link": "https://www.google.com"
+            },
+            {
+                "key": "0-2",
+                "label": "Doc",
+                "data": "Work Folder",
+                "icon": "pi pi-fw pi-angle-right",
+                "children": [],
+                "Direct Link": "https://www.google.com"
+            },
+            {
+                "key": "0-3",
+                "label": "List",
+                "data": "Work Folder",
+                "icon": "pi pi-fw pi-angle-right",
+                "children": [],
+                "Direct Link": "https://www.google.com"
+            },
+            {
+                "key": "0-4",
+                "label": "CatSec",
+                "data": "Work Folder",
+                "icon": "pi pi-fw pi-angle-right",
+                "children": [],
+                "Direct Link": "https://www.google.com"
+            },
+            {
+                "key": "0-5",
+                "label": "Master",
+                "data": "Work Folder",
+                "icon": "pi pi-fw pi-angle-right",
+                "children": [],
+                "Direct Link": "https://www.google.com"
+            }
+        ]
+        }
+    ]
+}

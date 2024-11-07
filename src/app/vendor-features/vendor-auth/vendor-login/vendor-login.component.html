@@ -1,0 +1,58 @@
+<div class="vender-login-main">
+    <div class="login-welcome-col">
+        <form class="d-flex align-items-center gap-1" [formGroup]="loginForm" (ngSubmit)="signIn()">
+            <div class="login-col">
+                <div class="vender-login-title d-flex flex-column align-items-center justify-content-center">
+                    <img class="mb-4" src="/assets/images/logo.svg" />
+                    <h2 class="m-2 font-bold">Welcome to SeaLink!</h2>
+                    <p class="m-0" style="">Enter your email & password to continue</p>
+                </div>
+                <div class="vender-login-form w-full d-flex flex-column align-items-start">
+                    <div class="">
+                        <label class="mb-2 d-block font-semibold">Email Address</label>
+                        <div class="input-field">
+                            <i class="pi pi-envelope" style="font-size: 20px;color: #7C7C7D"></i>
+                            <input type="text" formControlName="email" pInputText
+                                placeholder="Enter your email address" />
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <label class="mb-2 d-block font-semibold">Password</label>
+                        <div class="input-field">
+                            <i class="pi pi-lock" style="font-size: 20px;color: #7C7C7D"></i>
+                            <input type="password" formControlName="passKey" pInputText
+                                placeholder="Enter your password" />
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <p-checkbox value="New York" inputId="ny" />
+                        <label for="ny" style="color: #7C7C7D">Remember me</label>
+
+                        <p class="mb-0 font-medium">Forgot password?</p>
+                    </div>
+
+                    <p-button class="w-full" label="Submit" type="submit" />
+                    <p class="resgiter-link">Don’t have an account? <a routerLink="/vendor-auth/register"> <span
+                                class="" style="color: #5C78F1">Register</span></a>
+                    </p>
+
+
+                </div>
+            </div> 
+        </form>
+    </div>
+    <div class="about-vender-login text-white">
+        <p-carousel [value]="carouselData" [numVisible]="1" [circular]="true" [autoplayInterval]="3000">
+            <ng-template pTemplate="item" let-carousel>
+                <div class="car-item text-center">
+
+                    <h1 class="car-title">{{ carousel.title }}</h1>
+                    <p>{{ carousel.desc }}</p>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+</div>

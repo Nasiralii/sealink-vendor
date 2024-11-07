@@ -1,0 +1,420 @@
+<div class="vender-login-main">
+    <div class="login-welcome-col">
+        <div class="w-80">
+            <div class="vender-login-title d-flex flex-column align-items-center justify-content-center">
+                <img class="mb-4" src="/assets/images/logo.svg" />
+                <h2 class="m-2 font-bold">Welcome to SeaLink!</h2>
+                <p class="m-0">Enter your information for account creation.</p>
+            </div>
+            <div class="d-none" *ngIf="vendorForm">
+                <pre>{{vendorForm.value | json}}</pre>
+            </div>
+            <p-steps [model]="items" [(activeIndex)]="activeIndex" [readonly]="false"
+                [ngClass]="{ 'custom-steps': true }"></p-steps>
+        </div>
+        <form class="d-flex align-items-center gap-1" [formGroup]="vendorForm" (ngSubmit)="submitVendorInfo()">
+            <div class="login-col">
+
+                <div *ngIf="activeIndex === 0">
+                    <div class="vender-login-form w-full d-flex flex-column align-items-start">
+                        <div class=" flex flex-column mb-4">
+                            <label class="mb-2 d-block font-semibold">Contact Type</label>
+
+                            <div class="flex flex-row justify-content-between rounded-7 overflow-hidden">
+                                <div class="flex align-items-center relative company w-full custom-radio-btn">
+                                    <p-radioButton value="1" class="d-none" formControlName="intVendorType" inputId="ingredient1"
+                                        (onClick)="onRegistrationTypeChange(registrationType.Company)" />
+                                    <label [ngClass]="{'active': registrationType.Company === selectedRegistrationType}"
+                                        for="ingredient1" class="border-left-radius company absolute right-0 left-0 cursor-pointer top-0 bottom-0 company text-center">
+                                        Company
+                                    </label>
+                                </div>
+
+                                <div class="flex align-items-center relative w-full custom-radio-btn">
+                                    <p-radioButton value="2" class="d-none" formControlName="intVendorType" inputId="ingredient2"
+                                        (onClick)="onRegistrationTypeChange(registrationType.Individual)" />
+                                    <label for="ingredient2" class="absolute overflow-hidden border-right-radius border-1 right-0 individual left-0 cursor-pointer top-0 bottom-0 text-center">
+                                        Individual
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 lg:col-3" *ngIf="selectedRegistration == registrationType.Individual">
+                            <label class="mb-2 d-block font-semibold">Vendor Name <span
+                                    class="mandatory"></span></label>
+                            <div class="">
+                                <input type="text" formControlName="vaVendorName" pInputText
+                                    placeholder="Enter Vendor Name" />
+                            </div>
+                        </div>
+                        <div class="col-12 lg:col-3">
+                            <label class="mb-2 d-block font-semibold"
+                                *ngIf="selectedRegistration != registrationType.Individual">Company Name <span
+                                    class="mandatory"></span></label>
+                            <label class="mb-2 d-block font-semibold"
+                                *ngIf="selectedRegistration == registrationType.Individual">Vendor Company Name <span
+                                    class="mandatory"></span></label>
+                            <div class="">
+                                <input type="text" formControlName="vaCompanyName" pInputText
+                                    placeholder="Enter Company Name" />
+                            </div>
+                            <div class="error-message"
+                                *ngIf="vendorForm.get('vaCompanyName').invalid && vendorForm.get('vaCompanyName').touched">
+                                Company Name is required.
+                            </div>
+                        </div>
+                        <div class="col-12 lg:col-3">
+                            <div class="flex flex-column">
+                                <label class="mb-2 d-block font-semibold">Country <span
+                                        class="mandatory"></span></label>
+                                <p-dropdown [options]="countryList" formControlName="countryUID" [filter]="true"
+                                    optionLabel="countryName" optionValue="countryUID"
+                                    (onChange)="onChangeCountry($event)" placeholder="Select Country"></p-dropdown>
+                            </div>
+                            <div class="error-message"
+                                *ngIf="vendorForm.get('countryUID').invalid && vendorForm.get('countryUID').touched">
+                                Country is required.
+                            </div>
+                        </div>
+
+                        <div class="col-12 lg:col-3">
+                            <label class="mb-2 d-block font-semibold">State <span class="mandatory"></span></label>
+                            <p-dropdown class="w-full d-block" [options]="stateList" [filter]="true"
+                                filterBy="stateName" placeholder="Select State" formControlName="uiCompanyState"
+                                optionLabel="stateName" optionValue="stateUID" [showClear]="true"></p-dropdown>
+
+                            <div class="error-message"
+                                *ngIf="vendorForm.get('uiCompanyState').invalid && vendorForm.get('uiCompanyState').touched">
+                                State is required.
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button class="submit-btn pt-3"(click)="nextStep()">Next</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="activeIndex === 1">
+                    <div class="vender-login-form w-full d-flex flex-column align-items-start">
+
+                        <div class="flex flex-column multi-input">
+                            <label class="mb-2 d-block font-semibold">Contact Number <span
+                                    class="mandatory"></span></label>
+                            <div class="d-flex">
+                                <p-dropdown placeholder="CC" [options]="countryCodeList" [filter]="true"
+                                    optionLabel="formattedCountry" optionValue="countryUID"
+                                    formControlName="workContactCountryCodeUID">
+                                    <ng-template let-country pTemplate="selectedItem">
+                                        <div>{{ country.countryCode }}</div>
+                                    </ng-template></p-dropdown>
+
+                                <input type="text" class="input-fields" pInputText formControlName="vaContactNo" />
+                            </div>
+                            <div class="error-message"
+                                *ngIf="vendorForm.get('vaContactNo').invalid && vendorForm.get('vaContactNo').touched">
+                                A valid contact number is required.
+                            </div>
+                        </div>
+                        <div class="flex flex-column">
+                            <label class="mb-2 d-block font-semibold">Contact Person <span
+                                    class="mandatory"></span></label>
+                            <div class="d-flex">
+                                <input type="text" class="" pInputText placeholder="Contact Person"
+                                    formControlName="vaContactPersonName" />
+                            </div>
+                            <div class="error-message"
+                                *ngIf="vendorForm.get('vaContactPersonName').invalid && vendorForm.get('vaContactPersonName').touched">
+                                Contact Person is required.
+                            </div>
+                        </div>
+                        <div class="flex flex-column">
+                            <label class="mb-2 d-block font-semibold">Designation </label>
+                            <div class="d-flex">
+                                <input type="text" class="" pInputText placeholder="vaDesignation"
+                                    formControlName="Designation" />
+                            </div>
+                        </div>
+
+                        <div class="flex flex-column icon-field">
+                            <label class="mb-2 d-block font-semibold">Official Email <span
+                                    class="mandatory"></span></label>
+                            <div class="">
+                                <input type="text" class="input-fields" pInputText placeholder="Official Email"
+                                    formControlName="vaContactPersonMailID" />
+                                <div class="error-message"
+                                    *ngIf="vendorForm.get('vaContactPersonMailID').invalid && vendorForm.get('vaContactPersonMailID').touched">
+                                    A valid email is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between mt-2">
+                         <button class="previouse pt-3" (click)="previousStep()">Previous</button>
+                        <button class="submit-btn pt-3"(click)="nextStep()">Next</button>
+                    </div>
+                </div>
+
+                <div class="d-none" *ngIf="activeIndex === 2">
+                    <div class="vender-login-form w-full d-flex flex-column align-items-start">
+                        <div class=" flex flex-column">
+                            <label class="mb-2 d-block font-semibold">Tax Treatment <span
+                                    class="mandatory"></span></label>
+                            <div class="">
+                                <!-- <input type="text" placeholder="Tax Treatment" pInputText formControlName="vaTRN" /> -->
+                                <p-dropdown placeholder="Tax Treatment" formControlName="uiTaxTreatmentID"
+                                    [showClear]="true" [options]="taxTreatments" [filter]="true"
+                                    optionLabel="taxTreatmentName" optionValue="taxTreatmentUID"
+                                    placeholder="Select Tax Treatment"></p-dropdown>
+                                <div class="error-message"
+                                    *ngIf="vendorForm.get('uiTaxTreatmentID').invalid && vendorForm.get('uiTaxTreatmentID').touched">
+                                    Tax Treatment is required.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" flex flex-column"
+                            [ngClass]="{ 'd-none': vendorForm.get('uiTaxTreatmentID').value == '' }">
+                            <label class="mb-2 d-block font-semibold">Tax ID <span class="mandatory"></span></label>
+                            <div class="">
+                                <input type="text" placeholder="Tax ID" pInputText formControlName="vaTRN" />
+                                <div class="error-message"
+                                    *ngIf="vendorForm.get('vaTRN').invalid && vendorForm.get('vaTRN').touched">
+                                    Tax ID is required.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" flex flex-column">
+                            <label class="mb-2 d-block font-semibold">Source of Supply</label>
+                            <p-dropdown [options]="countryList" formControlName="supplierCountryUID" [filter]="true"
+                                optionLabel="countryName" optionValue="countryUID"
+                                placeholder="Choose Source of Supply"></p-dropdown>
+                        </div>
+
+                        <div class=" flex flex-column">
+                            <label class="mb-2 d-block font-semibold">Currency </label>
+                            <p-dropdown [options]="currencies" optionValue="masterUID" optionLabel="Title"
+                                placeholder="Select Currency" formControlName="uiCurrencyID"></p-dropdown>
+                            <div class="error-message"
+                                *ngIf="vendorForm.get('uiCurrencyID').invalid && vendorForm.get('uiCurrencyID').touched">
+                                Currency is required.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                         <button class="previouse pt-3" (click)="previousStep()">Previous</button>
+                          <button class="submit-btn pt-3"(click)="nextStep()">Next</button>
+                    </div>
+                </div>
+
+                <div *ngIf="activeIndex === 2">
+                    <div class="vender-login-form w-full d-flex flex-column align-items-start">
+                        <div class="flex justify-content-between">
+                            <div class="flex flex-column">
+                                <label class="mb-2 d-block font-semibold">Trade License <span
+                                        class="mandatory"></span></label>
+                               <div class="flex flex-row gap-2 justify-content-between">
+                                 <div class="fileUpload">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                                        fill="none">
+                                        <path
+                                            d="M7.1215 21.3332C5.53817 21.3332 4.18747 20.788 3.06942 19.6978C1.95136 18.6005 1.39233 17.2637 1.39233 15.6873C1.39233 14.3332 1.79858 13.1248 2.61108 12.0623C3.43053 10.9998 4.49997 10.3228 5.81942 10.0311C6.25692 8.43386 7.12497 7.1422 8.42358 6.15609C9.72914 5.16303 11.2048 4.6665 12.8507 4.6665C14.8854 4.6665 16.6076 5.37484 18.0173 6.7915C19.434 8.20123 20.1423 9.92345 20.1423 11.9582C21.3437 12.0971 22.3368 12.6179 23.1215 13.5207C23.9132 14.4096 24.309 15.4512 24.309 16.6457C24.309 17.9512 23.8541 19.0589 22.9444 19.9686C22.0347 20.8783 20.9271 21.3332 19.6215 21.3332H13.8923C13.3229 21.3332 12.8333 21.1283 12.4236 20.7186C12.0139 20.3158 11.809 19.8262 11.809 19.2498V13.8853L10.1423 15.4998L8.684 14.0415L12.8507 9.87484L17.0173 14.0415L15.559 15.4998L13.8923 13.8853V19.2498H19.6215C20.3507 19.2498 20.9653 18.9964 21.4653 18.4894C21.9722 17.9894 22.2257 17.3748 22.2257 16.6457C22.2257 15.9165 21.9722 15.3019 21.4653 14.8019C20.9653 14.295 20.3507 14.0415 19.6215 14.0415H18.059V11.9582C18.059 10.5207 17.5521 9.2915 16.5382 8.27067C15.5243 7.25678 14.2951 6.74984 12.8507 6.74984C11.4132 6.74984 10.184 7.25678 9.16317 8.27067C8.14928 9.2915 7.64233 10.5207 7.64233 11.9582H7.1215C6.11456 11.9582 5.25692 12.3158 4.54858 13.0311C3.83331 13.7394 3.47567 14.5971 3.47567 15.604C3.47567 16.6109 3.83331 17.479 4.54858 18.2082C5.25692 18.9026 6.11456 19.2498 7.1215 19.2498H9.72567V21.3332"
+                                            fill="#565A5E" />
+                                    </svg>
+                                    <span>Upload</span>
+                                    <input type="file" class="inputfile" (change)="onFileChange($event, 'tradeLicense')"
+                                        accept=".pdf, .docx, image/*" />
+                                </div>
+                                 <div class="position-relative" *ngIf="tradeLicenseName != null">
+                                <img class="close-icon" src="/assets/layout/images/upload-close-icon.svg"/>
+                                 <p class="filename" *ngIf="tradeLicenseName != null">{{ tradeLicenseName.name }}</p>
+                               </div>
+                               </div>
+                            </div>
+                          
+                        </div>
+                          <div class="remarks-input flex flex-column" [ngClass]="{ 'd-none': tradeLicense == null }">
+                                <label class="mb-2 d-block font-semibold">Remarks</label>
+                                <input type="text" pInputText placeholder="Remarks"
+                                    formControlName="tradeLicenseRemarks" />
+                            </div>
+                        <div class="flex justify-content-between">
+                            <div class="flex flex-column">
+                                <label class="mb-2 d-block font-semibold">Ultimate Beneficiary <span
+                                        class="mandatory"></span></label>
+                                         <div class="flex flex-row gap-2 justify-content-between">
+                                <div class="fileUpload">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                                        fill="none">
+                                        <path
+                                            d="M7.1215 21.3332C5.53817 21.3332 4.18747 20.788 3.06942 19.6978C1.95136 18.6005 1.39233 17.2637 1.39233 15.6873C1.39233 14.3332 1.79858 13.1248 2.61108 12.0623C3.43053 10.9998 4.49997 10.3228 5.81942 10.0311C6.25692 8.43386 7.12497 7.1422 8.42358 6.15609C9.72914 5.16303 11.2048 4.6665 12.8507 4.6665C14.8854 4.6665 16.6076 5.37484 18.0173 6.7915C19.434 8.20123 20.1423 9.92345 20.1423 11.9582C21.3437 12.0971 22.3368 12.6179 23.1215 13.5207C23.9132 14.4096 24.309 15.4512 24.309 16.6457C24.309 17.9512 23.8541 19.0589 22.9444 19.9686C22.0347 20.8783 20.9271 21.3332 19.6215 21.3332H13.8923C13.3229 21.3332 12.8333 21.1283 12.4236 20.7186C12.0139 20.3158 11.809 19.8262 11.809 19.2498V13.8853L10.1423 15.4998L8.684 14.0415L12.8507 9.87484L17.0173 14.0415L15.559 15.4998L13.8923 13.8853V19.2498H19.6215C20.3507 19.2498 20.9653 18.9964 21.4653 18.4894C21.9722 17.9894 22.2257 17.3748 22.2257 16.6457C22.2257 15.9165 21.9722 15.3019 21.4653 14.8019C20.9653 14.295 20.3507 14.0415 19.6215 14.0415H18.059V11.9582C18.059 10.5207 17.5521 9.2915 16.5382 8.27067C15.5243 7.25678 14.2951 6.74984 12.8507 6.74984C11.4132 6.74984 10.184 7.25678 9.16317 8.27067C8.14928 9.2915 7.64233 10.5207 7.64233 11.9582H7.1215C6.11456 11.9582 5.25692 12.3158 4.54858 13.0311C3.83331 13.7394 3.47567 14.5971 3.47567 15.604C3.47567 16.6109 3.83331 17.479 4.54858 18.2082C5.25692 18.9026 6.11456 19.2498 7.1215 19.2498H9.72567V21.3332"
+                                            fill="#565A5E" />
+                                    </svg>
+                                    <span>Upload</span>
+                                    <input type="file" class="inputfile"
+                                        (change)="onFileChange($event, 'ultimateBeneficiary')"
+                                        accept=".pdf, .docx, image/*" />
+                                </div>
+                                 <div class="position-relative" *ngIf="ultimateBeneficiaryName != null">
+                                     <img class="close-icon" src="/assets/layout/images/upload-close-icon.svg"/>
+                                <p class="filename" *ngIf="ultimateBeneficiaryName != null">{{
+                                    ultimateBeneficiaryName.name }}
+                                </p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                           <div class="remarks-input flex flex-column" [ngClass]="{ 'd-none': ultimateBeneficiary == null }">
+                                <label class="mb-2 d-block font-semibold">Remarks </label>
+                                <input type="text" pInputText placeholder="Remarks"
+                                    formControlName="ultimateBeneficiaryRemarks" />
+                            </div>
+                        <div class="flex justify-content-between">
+                            <div class="flex flex-column">
+                                <label class="mb-2 d-block font-semibold">Tax Document <span
+                                        class="mandatory"></span></label>
+                              <div class="flex flex-row justify-content-between gap-2">
+                                  <div class="fileUpload">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                                        fill="none">
+                                        <path
+                                            d="M7.1215 21.3332C5.53817 21.3332 4.18747 20.788 3.06942 19.6978C1.95136 18.6005 1.39233 17.2637 1.39233 15.6873C1.39233 14.3332 1.79858 13.1248 2.61108 12.0623C3.43053 10.9998 4.49997 10.3228 5.81942 10.0311C6.25692 8.43386 7.12497 7.1422 8.42358 6.15609C9.72914 5.16303 11.2048 4.6665 12.8507 4.6665C14.8854 4.6665 16.6076 5.37484 18.0173 6.7915C19.434 8.20123 20.1423 9.92345 20.1423 11.9582C21.3437 12.0971 22.3368 12.6179 23.1215 13.5207C23.9132 14.4096 24.309 15.4512 24.309 16.6457C24.309 17.9512 23.8541 19.0589 22.9444 19.9686C22.0347 20.8783 20.9271 21.3332 19.6215 21.3332H13.8923C13.3229 21.3332 12.8333 21.1283 12.4236 20.7186C12.0139 20.3158 11.809 19.8262 11.809 19.2498V13.8853L10.1423 15.4998L8.684 14.0415L12.8507 9.87484L17.0173 14.0415L15.559 15.4998L13.8923 13.8853V19.2498H19.6215C20.3507 19.2498 20.9653 18.9964 21.4653 18.4894C21.9722 17.9894 22.2257 17.3748 22.2257 16.6457C22.2257 15.9165 21.9722 15.3019 21.4653 14.8019C20.9653 14.295 20.3507 14.0415 19.6215 14.0415H18.059V11.9582C18.059 10.5207 17.5521 9.2915 16.5382 8.27067C15.5243 7.25678 14.2951 6.74984 12.8507 6.74984C11.4132 6.74984 10.184 7.25678 9.16317 8.27067C8.14928 9.2915 7.64233 10.5207 7.64233 11.9582H7.1215C6.11456 11.9582 5.25692 12.3158 4.54858 13.0311C3.83331 13.7394 3.47567 14.5971 3.47567 15.604C3.47567 16.6109 3.83331 17.479 4.54858 18.2082C5.25692 18.9026 6.11456 19.2498 7.1215 19.2498H9.72567V21.3332"
+                                            fill="#565A5E" />
+                                    </svg>
+                                    <span>Upload</span>
+                                    <input type="file" class="inputfile" (change)="onFileChange($event, 'taxDocument')"
+                                        accept=".pdf, .docx, image/*" />
+                                </div>
+                                  <div class="position-relative"  *ngIf="taxDocumentName != null">
+                                     <img class="close-icon" src="/assets/layout/images/upload-close-icon.svg"/>
+                                <p class="filename" *ngIf="taxDocumentName != null">{{ taxDocumentName.name }}</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="remarks-input flex flex-column" [ngClass]="{ 'd-none': taxDocument == null }">
+                                <label class="mb-2 d-block font-semibold">Remarks </label>
+                                <input type="text" pInputText placeholder="Remarks"
+                                    formControlName="taxDocumentRemarks" />
+                            </div>
+                        </div>
+                        <div class="flex justify-content-between">
+                            <div class="flex flex-column">
+                                <label class="mb-2 d-block font-semibold">Bank Statement</label>
+                               <div class="flex flex-row justify-content-between gap-2">
+                                 <div class="fileUpload">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                                        fill="none">
+                                        <path
+                                            d="M7.1215 21.3332C5.53817 21.3332 4.18747 20.788 3.06942 19.6978C1.95136 18.6005 1.39233 17.2637 1.39233 15.6873C1.39233 14.3332 1.79858 13.1248 2.61108 12.0623C3.43053 10.9998 4.49997 10.3228 5.81942 10.0311C6.25692 8.43386 7.12497 7.1422 8.42358 6.15609C9.72914 5.16303 11.2048 4.6665 12.8507 4.6665C14.8854 4.6665 16.6076 5.37484 18.0173 6.7915C19.434 8.20123 20.1423 9.92345 20.1423 11.9582C21.3437 12.0971 22.3368 12.6179 23.1215 13.5207C23.9132 14.4096 24.309 15.4512 24.309 16.6457C24.309 17.9512 23.8541 19.0589 22.9444 19.9686C22.0347 20.8783 20.9271 21.3332 19.6215 21.3332H13.8923C13.3229 21.3332 12.8333 21.1283 12.4236 20.7186C12.0139 20.3158 11.809 19.8262 11.809 19.2498V13.8853L10.1423 15.4998L8.684 14.0415L12.8507 9.87484L17.0173 14.0415L15.559 15.4998L13.8923 13.8853V19.2498H19.6215C20.3507 19.2498 20.9653 18.9964 21.4653 18.4894C21.9722 17.9894 22.2257 17.3748 22.2257 16.6457C22.2257 15.9165 21.9722 15.3019 21.4653 14.8019C20.9653 14.295 20.3507 14.0415 19.6215 14.0415H18.059V11.9582C18.059 10.5207 17.5521 9.2915 16.5382 8.27067C15.5243 7.25678 14.2951 6.74984 12.8507 6.74984C11.4132 6.74984 10.184 7.25678 9.16317 8.27067C8.14928 9.2915 7.64233 10.5207 7.64233 11.9582H7.1215C6.11456 11.9582 5.25692 12.3158 4.54858 13.0311C3.83331 13.7394 3.47567 14.5971 3.47567 15.604C3.47567 16.6109 3.83331 17.479 4.54858 18.2082C5.25692 18.9026 6.11456 19.2498 7.1215 19.2498H9.72567V21.3332"
+                                            fill="#565A5E" />
+                                    </svg>
+                                    <span>Upload</span>
+                                    <input type="file" class="inputfile"
+                                        (change)="onFileChange($event, 'bankStatement')"
+                                        accept=".pdf, .docx, image/*" />
+                                </div>
+                                 <div class="position-relative"  *ngIf="bankStatementName != null">
+                                    <img class="close-icon" src="/assets/layout/images/upload-close-icon.svg"/>
+                                <p class="filename" *ngIf="bankStatementName != null">{{ bankStatementName.name }}</p>
+                                </div>
+                       
+                               </div>     </div>
+                         
+                        </div>
+                           <div class="remarks-input flex flex-column" [ngClass]="{ 'd-none': bankStatement == null }">
+                                <label class="mb-2 d-block font-semibold">Remarks</label>
+                                <input type="text" pInputText placeholder="Remarks"
+                                    formControlName="bankStatementRemarks" />
+                            </div>
+                        <div class="flex justify-content-between">
+                            <div class="flex flex-column">
+                                <label class="mb-2 d-block font-semibold">Share Holder Document</label>
+                               <div class="flex flex-row gap-2 justify-content-between">
+                                 <div class="fileUpload">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                                        fill="none">
+                                        <path
+                                            d="M7.1215 21.3332C5.53817 21.3332 4.18747 20.788 3.06942 19.6978C1.95136 18.6005 1.39233 17.2637 1.39233 15.6873C1.39233 14.3332 1.79858 13.1248 2.61108 12.0623C3.43053 10.9998 4.49997 10.3228 5.81942 10.0311C6.25692 8.43386 7.12497 7.1422 8.42358 6.15609C9.72914 5.16303 11.2048 4.6665 12.8507 4.6665C14.8854 4.6665 16.6076 5.37484 18.0173 6.7915C19.434 8.20123 20.1423 9.92345 20.1423 11.9582C21.3437 12.0971 22.3368 12.6179 23.1215 13.5207C23.9132 14.4096 24.309 15.4512 24.309 16.6457C24.309 17.9512 23.8541 19.0589 22.9444 19.9686C22.0347 20.8783 20.9271 21.3332 19.6215 21.3332H13.8923C13.3229 21.3332 12.8333 21.1283 12.4236 20.7186C12.0139 20.3158 11.809 19.8262 11.809 19.2498V13.8853L10.1423 15.4998L8.684 14.0415L12.8507 9.87484L17.0173 14.0415L15.559 15.4998L13.8923 13.8853V19.2498H19.6215C20.3507 19.2498 20.9653 18.9964 21.4653 18.4894C21.9722 17.9894 22.2257 17.3748 22.2257 16.6457C22.2257 15.9165 21.9722 15.3019 21.4653 14.8019C20.9653 14.295 20.3507 14.0415 19.6215 14.0415H18.059V11.9582C18.059 10.5207 17.5521 9.2915 16.5382 8.27067C15.5243 7.25678 14.2951 6.74984 12.8507 6.74984C11.4132 6.74984 10.184 7.25678 9.16317 8.27067C8.14928 9.2915 7.64233 10.5207 7.64233 11.9582H7.1215C6.11456 11.9582 5.25692 12.3158 4.54858 13.0311C3.83331 13.7394 3.47567 14.5971 3.47567 15.604C3.47567 16.6109 3.83331 17.479 4.54858 18.2082C5.25692 18.9026 6.11456 19.2498 7.1215 19.2498H9.72567V21.3332"
+                                            fill="#565A5E" />
+                                    </svg>
+                                    <span>Upload</span>
+                                    <input type="file" class="inputfile"
+                                        (change)="onFileChange($event, 'shareholderDocument')"
+                                        accept=".pdf, .docx, image/*" />
+                                </div>
+                                 <div class="position-relative" *ngIf="shareholderDocumentName != null">
+                                    <img class="close-icon" src="/assets/layout/images/upload-close-icon.svg"/>
+                                <p class="filename" *ngIf="shareholderDocumentName != null">{{
+                                    shareholderDocumentName.name }}
+                                </p>
+                                </div>
+                               </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                     <div class="remarks-input flex flex-column" [ngClass]="{ 'd-none': shareholderDocument == null }">
+                                <label class="mb-2 d-block font-semibold">Remarks</label>
+                                <input type="text" pInputText placeholder="Remarks"
+                                    formControlName="shareHolderDocumentRemarks" />
+                            </div>
+                    <div class="d-flex gap-2 mt-4">
+                        <p-checkbox name="terms" formControlName="isTermsAccepted" binary="true"
+                            inputId="terms-checkbox"></p-checkbox>
+                        <label for="terms-checkbox">I agree to the Terms and Conditions</label>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <!-- <p-button class="previouse pt-3"  label="" type="button" /> -->
+                        <button class="previouse pt-3" (click)="previousStep()">Previous</button>
+                        <!-- <button class="submit-btn pt-3"(click)="nextStep()">Next</button> -->
+                         <button class="submit-btn pt-3" type="submit" (click)="nextStep()" [disabled]="formIsSubmitting || vendorForm.invalid">
+    Submit
+</button>
+                        <!-- <p-button class="submit pt-3" label="Submit" type="submit"
+                            [disabled]="formIsSubmitting || vendorForm.invalid" /> -->
+                    </div>
+                </div>
+
+                <div *ngIf="activeIndex === 4">
+                    <div class="vender-login-form w-full d-flex flex-column align-items-start">
+                        <div class="flex flex-column icon-field">
+                            <label class="mb-2 d-block font-semibold">Official Email <span
+                                    class="mandatory"></span></label>
+                            <div class="">
+                                <input type="text" class="input-fields" pInputText placeholder="Official Email"
+                                    formControlName="vaContactPersonMailID" />
+                                <div class="error-message"
+                                    *ngIf="vendorForm.get('vaContactPersonMailID').invalid && vendorForm.get('vaContactPersonMailID').touched">
+                                    A valid email is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex justify-content-between">
+                         <button class="previouse pt-3" (click)="previousStep()">Previous</button>
+                        <p-button class="w-fit pt-3" label="Submit" type="submit" [disabled]="formIsSubmitting" />
+                    </div>
+                </div>
+
+                <div class="vender-login-form w-full d-flex flex-column align-items-start mt-5">
+                    <p class="resgiter-link">Already have an account? <a routerLink="/vendor">
+                            <span style="color: #5C78F1">Sign In</span></a>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="about-vender-login text-white">
+        <p-carousel [value]="carouselData" [numVisible]="1" [circular]="true" [autoplayInterval]="3000">
+            <ng-template pTemplate="item" let-carousel>
+                <div class="car-item text-center">
+
+                    <h1 class="car-title">{{ carousel.title }}</h1>
+                    <p>{{ carousel.desc }}</p>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+</div>

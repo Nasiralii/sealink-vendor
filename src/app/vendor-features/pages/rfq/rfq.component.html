@@ -1,0 +1,151 @@
+<div class="flex">
+    <div class="layout-sidebar">
+        <div class="sidebar-scroll-content">
+            <app-sidebar></app-sidebar>
+        </div>
+    </div>
+
+    <div class="layout-main Full404 w-full mx-3">
+        <section class="vendorDashBoard">
+            <div style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px;
+                background: #F2F5FA">
+                <div class="flex flex-row align-items-center gap-2">
+                    <div class="head font-bold mr-2">RFQ</div>
+                    <div class="search-bar">
+                        <i class="pi pi-search"></i>
+                        <input type="text" class="border-0" pInputText placeholder="Search..." />
+                        <div class="search-icon" (click)="toggleDropdown()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-caret-down-fill" [ngClass]="{ 'rotate-icon': isDropdownOpen }"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <p-paginator class="ml-auto flex justify-content-end custome-paginator" [first]="first2" [rows]="rows2"
+                    [totalRecords]="rfqsData.length" (onPageChange)="onPageChange($event)"
+                    [showCurrentPageReport]="true" currentPageReportTemplate="{first} - {last} / {totalRecords}"
+                    [showPageLinks]="false" [showFirstLastIcon]="false"></p-paginator>
+            </div>
+            <div class="grid p-fluid gridViewInline p-4 absolute z-5 mb-2 filter" *ngIf="isDropdownOpen">
+                <div class="col-4">
+                    <div class="grid align-items-center gap-3">
+                        <img src="/assets/layout/images/filter.svg" />
+                        <span><b>Filters</b></span>
+                    </div>
+                    <div class="flex flex-column gap-1 my-2">
+                        <span class="cursor" *ngFor="let group of groups" (click)="selectGroup(group)" [ngClass]="{
+                            'selected-category': selectedGroup === group
+                        }">
+                            <img *ngIf="selectedGroup === group" src="/assets/layout/images/tik-green.svg"
+                                alt="Selected" />
+                            {{ group }}
+                        </span>
+                        <span style="border-bottom: 2px solid #dbdde3"></span>
+                        <button class="custome-btn">Add Custom Filter</button>
+                    </div>
+                </div>
+                <div class="col-4 border-left-right">
+                    <div class="ml-2">
+                        <div class="grid align-items-center gap-3">
+                            <img src="/assets/layout/images/group.svg" />
+                            <span><b>Group By</b></span>
+                        </div>
+                        <div class="flex flex-column gap-1 my-2">
+                            <span class="cursor" *ngFor="let category of categories" (click)="selectCategory(category)"
+                                [ngClass]="{
+                                'selected-category':
+                                    selectedCategory === category
+                            }">
+                                <img *ngIf="selectedCategory === category" src="/assets/layout/images/tik-green.svg"
+                                    alt="Selected" />
+                                {{ category }}
+                            </span>
+                            <span style="border-bottom: 2px solid #dbdde3"></span>
+                            <p-dropdown class="drop-down" [options]="cities" [(ngModel)]="selectedCity"
+                                placeholder="Add Custom Group" [editable]="true" optionLabel="name" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="ml-2">
+                        <div class="grid align-items-center gap-3">
+                            <img src="/assets/layout/images/star.svg" />
+                            <span><b>Favorites</b></span>
+                        </div>
+                        <p-dropdown class="drop-down my-2" [options]="cities" [(ngModel)]="selectedCity"
+                            placeholder="Save current Search" [editable]="true" optionLabel="name" />
+                    </div>
+                </div>
+            </div>
+            <p-table class="taable bg-white" [value]="rfqsData.slice(first2, first2 + rows2)"
+                [tableStyle]="{ 'min-width': '50rem' }">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th pSortableColumn="sNo">S.No</th>
+                        <th pSortableColumn="rfqNumber">
+                            RFQ ID
+                            <p-sortIcon field="rfqNumber"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="rfqStatus">
+                            Status
+                            <p-sortIcon field="rfqStatus"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="rfqCreatedDate">
+                            Created Date
+                            <p-sortIcon field="rfqCreatedDate"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="rfqOrderDeadLineDate">
+                            Order Deadline
+                            <p-sortIcon field="rfqOrderDeadLineDate"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="rfqExpectedArrivalDate">
+                            Expected Arrival
+                            <p-sortIcon field="rfqExpectedArrivalDate"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="vesselBranch">
+                            Vessel/Branch
+                            <p-sortIcon field="vesselBranch"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="CompanyName">
+                            Company Name
+                            <p-sortIcon field="CompanyName"></p-sortIcon>
+                        </th>
+                    </tr>
+                </ng-template>
+
+                <ng-template pTemplate="body" let-x let-i="rowIndex">
+                    <tr class="cursor-pointer" (click)="onNavigateToDetails(x)">
+                        <td>{{ first2 + i + 1 }}</td>
+                        <td>{{ x.rfqNumber }}</td>
+                        <td>
+                            <div [ngClass]="{
+                                'status-pending': x.rfqStatus === 'Pending',
+                                'status-processing':
+                                    x.rfqStatus === 'Processing',
+                                'status-processed':
+                                    x.rfqStatus === 'Processed',
+                                'status-rejected': x.rfqStatus === 'Rejected'
+                            }">
+                                {{ x.rfqStatus }}
+                            </div>
+                        </td>
+                        <td>{{ x.rfqCreatedDate | date }}</td>
+                        <td>{{ x.rfqOrderDeadLineDate | date }}</td>
+                        <td>{{ x.rfqExpectedArrivalDate | date }}</td>
+                        <td>{{ x.vesselName ?? "N/A" }} / {{x.BranchName ?? "N/A"}}</td>
+                        <td>{{ x.CompanyName }}</td>
+                    </tr>
+                    </ng-template>
+            </p-table>
+        </section>
+    </div>
+</div> 
+<app-footer></app-footer>

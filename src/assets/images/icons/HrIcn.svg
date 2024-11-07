@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70.109" viewBox="0 0 70 70.109">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.099" y1="1.086" x2="0.901" y2="0.07" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5d99ca"/>
+      <stop offset="1" stop-color="#7ed7de"/>
+    </linearGradient>
+  </defs>
+  <g id="hr" transform="translate(-548 -160)">
+    <rect id="Rectangle_15601" data-name="Rectangle 15601" width="70" height="70" rx="6" transform="translate(548 160)" fill="#10b8c4"/>
+    <path id="Path_59247" data-name="Path 59247" d="M1841.91,167.656,1868,195.094V219.58s-.4,5.529-5.374,5.529H1830.1l-10.27-13.23Z" transform="translate(-1250 5)" fill="rgba(0,0,0,0.16)"/>
+    <g id="Group_8981" data-name="Group 8981" transform="translate(569 170.999)">
+      <g id="_18-guity" data-name="18-guity" transform="translate(0 0.001)">
+        <circle id="Ellipse_73" data-name="Ellipse 73" cx="10.767" cy="10.767" r="10.767" transform="translate(3.005 3.486)" fill="#f5ef9d"/>
+        <path id="Path_59244" data-name="Path 59244" d="M20.149,272H7.2A7.2,7.2,0,0,0,0,279.2v12.953a1.439,1.439,0,0,0,1.439,1.439H25.906a1.439,1.439,0,0,0,1.439-1.439V279.2a7.2,7.2,0,0,0-7.2-7.2Z" transform="translate(0 -247.588)" fill="#f5ef9d"/>
+        <path id="Path_59245" data-name="Path 59245" d="M20.149,272H19.069l-4.821,6.428a.72.72,0,0,1-1.151,0L8.275,272H7.2A7.2,7.2,0,0,0,0,279.2v12.953a1.439,1.439,0,0,0,1.439,1.439H25.906a1.439,1.439,0,0,0,1.439-1.439V279.2A7.2,7.2,0,0,0,20.149,272Z" transform="translate(0 -247.588)" fill="url(#linear-gradient)"/>
+        <g id="Group_8980" data-name="Group 8980" transform="translate(0.72 0)">
+          <path id="Path_59246" data-name="Path 59246" d="M25.99,33.782h2.878V46H25.99Zm-12.953,0h2.878V46H13.037ZM27.429,1.438H13.314L9.974.1A1.439,1.439,0,0,0,8,1.438V9.344a4.32,4.32,0,0,0,4.318,4.313H28.868a4.32,4.32,0,0,0,4.318-4.313V7.188a5.76,5.76,0,0,0-5.757-5.75Z" transform="translate(-8 -0.001)" fill="#595d84"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

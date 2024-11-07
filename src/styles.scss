@@ -1,0 +1,401 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeflex/primeflex.scss";
+@import "../node_modules/primeicons/primeicons.css";
+@import "../node_modules/prismjs/themes/prism-coy.css";
+@import "assets/demo/flags/flags.css";
+
+@import "assets/web/authorization.scss";
+
+// external icons
+@import 'remixicon/fonts/remixicon.css';
+@import "~@flaticon/flaticon-uicons/css/all/all.css";
+
+//common File
+@import "assets/web/custom.scss";
+@import "assets/web/crew.scss";
+
+.ql-snow .ql-Table-Input .ql-picker-options {
+    padding: 3px 5px;
+    width: 152px;
+}
+.layout-footer {
+    position: relative;
+    z-index: 999;
+}
+.ql-snow .ql-Table-Input .ql-picker-item {
+    border: 1px solid transparent;
+    float: left;
+    height: 16px;
+    margin: 2px;
+    padding: 0px;
+    width: 16px;
+    background: lightsteelblue;
+}
+
+    .item-a {
+        padding: 12px 8px !important;
+        height: auto;
+    }
+
+.ql-snow .ql-Table-Input .ql-picker-item:hover, .ql-snow .ql-Table-Input .ql-picker-item.ql-picker-item-highlight {
+    border-color: #000;
+    background: steelblue;
+}
+
+.ql-snow .ql-Table-Input.ql-picker {
+    width: 28px;
+}
+
+.ql-snow .ql-Table-Input.ql-picker .ql-picker-label {
+    padding: 2px 4px;
+}
+
+.layout-wrapper .layout-sidebar .layout-menu li > a span {
+    font-weight: 600;
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.side-nav-active {
+    color: #4b6cb7 !important;
+}
+
+.p-datatable-wrapper {
+    overflow: auto;
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      
+    
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+    
+      &::-webkit-scrollbar-thumb:hover {
+        background: #8d99b4; 
+      }
+}
+
+
+@media screen and (min-device-width: 1400px) and (max-device-width: 2000px) {
+    .col-xxl {
+        flex: 1 0 0%
+    }
+
+    .row-cols-xxl-auto>* {
+        flex: 0 0 auto;
+        width: auto
+    }
+
+    .row-cols-xxl-1>* {
+        flex: 0 0 auto;
+        width: 100%
+    }
+
+    .row-cols-xxl-2>* {
+        flex: 0 0 auto;
+        width: 50%
+    }
+
+    .row-cols-xxl-3>* {
+        flex: 0 0 auto;
+        width: 33.3333333333%
+    }
+
+    .row-cols-xxl-4>* {
+        flex: 0 0 auto;
+        width: 25%
+    }
+
+    .row-cols-xxl-5>* {
+        flex: 0 0 auto;
+        width: 20%
+    }
+
+    .row-cols-xxl-6>* {
+        flex: 0 0 auto;
+        width: 16.6666666667%
+    }
+
+    .col-xxl-auto {
+        flex: 0 0 auto;
+        width: auto
+    }
+
+    .col-xxl-1 {
+        flex: 0 0 auto;
+        width: 8.33333333%
+    }
+
+    .col-xxl-2 {
+        flex: 0 0 auto;
+        width: 16.66666667%
+    }
+
+    .col-xxl-3 {
+        flex: 0 0 auto;
+        width: 25%
+    }
+
+    .col-xxl-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%
+    }
+
+    .col-xxl-5 {
+        flex: 0 0 auto;
+        width: 41.66666667%
+    }
+
+    .col-xxl-6 {
+        flex: 0 0 auto;
+        width: 50%
+    }
+
+    .col-xxl-7 {
+        flex: 0 0 auto;
+        width: 58.33333333%
+    }
+
+    .col-xxl-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%
+    }
+
+    .col-xxl-9 {
+        flex: 0 0 auto;
+        width: 75%
+    }
+
+    .col-xxl-10 {
+        flex: 0 0 auto;
+        width: 83.33333333%
+    }
+
+    .col-xxl-11 {
+        flex: 0 0 auto;
+        width: 91.66666667%
+    }
+
+    .col-xxl-12 {
+        flex: 0 0 auto;
+        width: 100%
+    }
+}
+@media (min-width:2000px){
+    .col-xxxl {
+        flex: 1 0 0%
+    }
+
+    .row-cols-xxxl-auto>* {
+        flex: 0 0 auto;
+        width: auto
+    }
+
+    .row-cols-xxxl-1>* {
+        flex: 0 0 auto;
+        width: 100%
+    }
+
+    .row-cols-xxxl-2>* {
+        flex: 0 0 auto;
+        width: 50%
+    }
+
+    .row-cols-xxxl-3>* {
+        flex: 0 0 auto;
+        width: 33.3333333333%
+    }
+
+    .row-cols-xxxl-4>* {
+        flex: 0 0 auto;
+        width: 25%
+    }
+
+    .row-cols-xxxl-5>* {
+        flex: 0 0 auto;
+        width: 20%
+    }
+
+    .row-cols-xxxl-6>* {
+        flex: 0 0 auto;
+        width: 16.6666666667%
+    }
+
+    .col-xxxl-auto {
+        flex: 0 0 auto;
+        width: auto
+    }
+
+    .col-xxxl-1 {
+        flex: 0 0 auto;
+        width: 8.33333333%
+    }
+
+    .col-xxxl-2 {
+        flex: 0 0 auto;
+        width: 16.66666667%
+    }
+
+    .col-xxxl-3 {
+        flex: 0 0 auto;
+        width: 25%
+    }
+
+    .col-xxxl-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%
+    }
+
+    .col-xxxl-5 {
+        flex: 0 0 auto;
+        width: 41.66666667%
+    }
+
+    .col-xxxl-6 {
+        flex: 0 0 auto;
+        width: 50%
+    }
+
+    .col-xxxl-7 {
+        flex: 0 0 auto;
+        width: 58.33333333%
+    }
+
+    .col-xxxl-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%
+    }
+
+    .col-xxxl-9 {
+        flex: 0 0 auto;
+        width: 75%
+    }
+
+    .col-xxxl-10 {
+        flex: 0 0 auto;
+        width: 83.33333333%
+    }
+
+    .col-xxxl-11 {
+        flex: 0 0 auto;
+        width: 91.66666667%
+    }
+
+    .col-xxxl-12 {
+        flex: 0 0 auto;
+        width: 100%
+    }
+}
+.container-padding{
+    display: block;
+    padding: 4px 15px!important;
+}
+
+@media (max-width:480px){
+    .container-padding{
+        display: block;
+        padding: 0px!important;
+    }
+    
+}
+
+
+.docPadding{
+    padding: 0 15px 4px 15px!important;
+}
+
+.layout-expand{
+    width:500px!important;
+    
+}
+.layout-main-expand{
+    margin-left:488px!important;
+}
+
+
+
+.hide-event-track {
+    width: 0!important;
+    height: 0!important;
+    visibility: hidden!important;
+    pointer-events: none!important;
+}
+
+
+p{
+    word-break: break-all;
+}
+.text-left
+{
+    text-align: left!important;
+}
+
+.bulkUploaddownloadExcel .buttonGroup .p-button {
+
+    height : 30px !important;
+}
+
+.bulkUploaddownloadExcel .buttonGroup .p-button.p-button-icon-only {
+    height : 30px;
+}
+
+
+.backIcon{
+    width: 30px;
+    height: 30px;
+    box-shadow:  0px 2px 6px #b5aeae;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin-right: 10px;
+    &:hover{
+        background-color: rgb(171, 236, 236);
+        i{
+            color: #fff!important;
+        }
+    }
+    
+  }
+ 
+
+  .tag-rs {
+    display: inline-block;
+    background-color: #f1f7fc; /* Light blue background */
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #4a4a4a;
+    border: 1px solid #d1d5da; /* Light gray border */
+    margin-right: 10px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+  }
+  
+  .close-btn-rs {
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  
+  .close-btn-rs:hover {
+    color: #ff0000; /* Change color on hover to red */
+  }
+
+
+
+

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="21" viewBox="0 0 21 21">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_16063" data-name="Rectangle 16063" width="21" height="21" transform="translate(1533 3159)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_7" data-name="Mask Group 7" transform="translate(-1533 -3159)" clip-path="url(#clip-path)">
+    <g id="Search_results_for_Accident_-_Flaticon-12_1_" data-name="Search results for Accident - Flaticon-12 (1)" transform="translate(1533 3159)">
+      <path id="Path_88334" data-name="Path 88334" d="M14.06,6.794h-.352a3.683,3.683,0,0,0,.5-1.853V3.706a3.706,3.706,0,1,0-7.412,0V4.941a3.683,3.683,0,0,0,.5,1.853H6.94A3.872,3.872,0,0,0,5.217,7.2a3.831,3.831,0,0,0-2.129,3.445v7.266a1.855,1.855,0,0,0,1.853,1.853h.618V21h9.882V17.294a2.473,2.473,0,0,0,2.471-2.471V10.646A3.847,3.847,0,0,0,14.06,6.794Zm.146,1.24v8.025H11.823l1.071-8.029C14.1,8.031,14.072,8.026,14.206,8.034ZM8.029,3.706a2.471,2.471,0,1,1,4.941,0V4.941a2.471,2.471,0,1,1-4.941,0Zm6.176,16.059H6.794V10.5H5.559v8.029H4.941a.618.618,0,0,1-.618-.618V10.646A2.613,2.613,0,0,1,6.94,8.029H8.454a3.7,3.7,0,0,0,3.133.455l-.681,5.1H9.882a1.853,1.853,0,0,0,0,3.706h4.324Zm-3.629-3.706H9.882a.618.618,0,0,1,0-1.235h.859Zm6.1-1.235a1.237,1.237,0,0,1-1.235,1.235V8.424a2.6,2.6,0,0,1,1.235,2.222Z" fill="#247dd4"/>
+    </g>
+  </g>
+</svg>

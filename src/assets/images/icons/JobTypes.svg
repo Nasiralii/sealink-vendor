@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="21" viewBox="0 0 21 21">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_16068" data-name="Rectangle 16068" width="21" height="21" transform="translate(664 3343)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_14" data-name="Mask Group 14" transform="translate(-664 -3343)" clip-path="url(#clip-path)">
+    <g id="Search_results_for_Job_-_Flaticon-13" data-name="Search results for Job - Flaticon-13" transform="translate(664 3343)">
+      <path id="Path_88340" data-name="Path 88340" d="M10.5,8.75A4.375,4.375,0,1,0,6.125,4.375,4.38,4.38,0,0,0,10.5,8.75Zm0-7A2.625,2.625,0,1,1,7.875,4.375,2.628,2.628,0,0,1,10.5,1.75Zm7,14.875V14a4.38,4.38,0,0,0-4.375-4.375H7.875A4.38,4.38,0,0,0,3.5,14v2.625H0v1.75H1.75V21H3.5V18.375h14V21h1.75V18.375H21v-1.75Zm-8.75,0H5.25V14a2.628,2.628,0,0,1,2.625-2.625h.574l1.262,1.893-.962,3.357Zm7,0h-3.5l-.962-3.357,1.262-1.893h.574A2.628,2.628,0,0,1,15.749,14v2.625Z" fill="#247dd4"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,168 @@
+.layout-main {
+    margin: 8px;
+}
+.vendorDashBoard {
+    background: transparent;
+}
+.search-icon {
+    height: 40px;
+    width: 45px;
+    background: #dbdde3;
+    position: relative;
+    right: -6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    background: white;
+    width: 523px;
+    border: 1px solid #dbdde3;
+    padding-left: 10px;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+input {
+    width: 100%;
+}
+
+.status-pending {
+    background: #5c96f8;
+    color: white;
+    padding: 6px 18px;
+    width: max-content;
+    border-radius: 33px;
+    text-align: center;
+}
+
+.status-processing {
+    background: #fcc115;
+    color: white;
+    padding: 6px 18px;
+    width: max-content;
+    border-radius: 33px;
+    text-align: center;
+}
+
+.status-processed {
+    background: #3cb25c;
+    color: white;
+    padding: 6px 18px;
+    width: max-content;
+    border-radius: 33px;
+    text-align: center;
+}
+
+.status-rejected {
+    background: #f0594c;
+    color: white;
+    padding: 6px 18px;
+    width: max-content;
+    border-radius: 33px;
+    text-align: center;
+}
+
+:host ::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+    padding: 16px !important;
+}
+
+:host ::ng-deep .p-datatable > th > tr > td {
+    padding: 16px !important;
+}
+
+:host ::ng-deep {
+    .p-datatable .p-datatable-thead > tr > th {
+        background: white !important;
+        padding: 16px !important;
+    }
+}
+
+:host ::ng-deep {
+    .p-paginator {
+        background: transparent;
+    }
+}
+
+:host ::ng-deep {
+    .p-paginator .p-paginator-first,
+    .p-paginator .p-paginator-prev,
+    .p-paginator .p-paginator-next,
+    .p-paginator .p-paginator-last {
+        background: white;
+        height: 2rem;
+        color: black;
+        box-shadow: #0000000d;
+        border: 1px solid #dbdde3;
+    }
+}
+
+.filter {
+    margin-left: 50px;
+    width: 523px;
+    border-radius: 7px;
+    border: 1px solid #dbdde3;
+    background: white;
+    box-shadow: #707070;
+    font-size: 12px;
+}
+
+.custome-btn {
+    background: #dbdde380;
+    padding: 10px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+:host ::ng-deep .drop-down .p-dropdown {
+    border: none !important;
+    font-size: 12px;
+}
+
+.bi-caret-down-fill {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* Smooth transition for rotation */
+}
+
+/* Class applied when the dropdown is open */
+.rotate-icon {
+    cursor: pointer;
+    transform: rotate(180deg);
+    /* Rotate the icon 180 degrees */
+}
+
+:host ::ng-deep .drop-down .p-dropdown {
+    border: none !important;
+    font-size: 12px;
+}
+
+// :host ::ng-deep .drop-down .p-focus {
+//     border: none !important;
+//     outline: none;
+// }
+:host ::ng-deep .drop-down .p-dropdown:not(.p-disabled).p-focus {
+    outline: 0 none;
+    box-shadow: none !important;
+}
+input {
+    border: none !important;
+}
+:host ::ng-deep input:focus-visible {
+    border: none !important;
+    outline: none !important;
+}
+.text-input {
+    width: 100%;
+    padding: 9px;
+    border-radius: 7px;
+    border: 1px solid #d0d5dd;
+}
+.text-input:focus-visible {
+    outline: none !important;
+}

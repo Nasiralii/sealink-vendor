@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="21" viewBox="0 0 21 21">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_16069" data-name="Rectangle 16069" width="21" height="21" transform="translate(1104 3343)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_15" data-name="Mask Group 15" transform="translate(-1104 -3343)" clip-path="url(#clip-path)">
+    <g id="Search_results_for_Id_-_Flaticon-13" data-name="Search results for Id - Flaticon-13" transform="translate(1104 3343)">
+      <path id="Path_88341" data-name="Path 88341" d="M18.375,3.5h-5.25V2.625a2.625,2.625,0,1,0-5.25,0V3.5H2.625A2.625,2.625,0,0,0,0,6.125V21H21V6.125A2.625,2.625,0,0,0,18.375,3.5Zm-8.75-.875a.875.875,0,0,1,1.75,0V5.25H9.625ZM19.25,19.25H1.75V6.125a.875.875,0,0,1,.875-.875h5.25V7h5.25V5.25h5.25a.875.875,0,0,1,.875.875ZM3.5,17.5H9.625V8.75H3.5Zm1.75-7H7.875v5.25H5.25Zm6.125,1.75H17.5V14H11.375Zm0-3.5H17.5V10.5H11.375Zm0,7H15.75V17.5H11.375Z" fill="#247dd4"/>
+    </g>
+  </g>
+</svg>

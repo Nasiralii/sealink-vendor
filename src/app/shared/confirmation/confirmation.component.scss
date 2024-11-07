@@ -1,0 +1,18 @@
+
+
+.confirm-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm-popup {
+    :host ::ng-deep .p-button-label {
+        padding: 0 10px;
+    }
+}
+.conirm-popup {
+    :host ::ng-deep .p-dialog-header {
+        padding-top: 20px !important;
+    }
+}

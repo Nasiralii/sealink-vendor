@@ -1,0 +1,50 @@
+{
+    "data": [
+        {
+            "id": 1000,
+            "skillType": "coding ",
+            "skillName": "Python language",
+            "rating": "50"
+        } ,
+        {
+            "id": 1000,
+            "skillType": "Designing ",
+            "skillName": "Figma",
+            "rating": "30"
+        } ,
+        {
+            "id": 1000,
+            "skillType": "coding ",
+            "skillName": "C#",
+            "rating": "90"
+        } 
+        ,
+        {
+            "id": 1000,
+            "skillType": "coding ",
+            "skillName": "C++",
+            "rating": "20"
+        } ,
+        {
+            "id": 1000,
+            "skillType": "Designing ",
+            "skillName": "Xd",
+            "rating": "70"
+        } ,
+        {
+            "id": 1000,
+            "skillType": "coding ",
+            "skillName": "Python language",
+            "rating": "20"
+        } ,
+          {
+            "id": 1000,
+            "skillType": "coding ",
+            "skillName": "Python language",
+            "rating": "10"
+        } 
+
+    
+    ]
+  }
+  

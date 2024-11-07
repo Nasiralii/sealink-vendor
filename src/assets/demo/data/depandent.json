@@ -1,0 +1,31 @@
+{
+    "data": [
+        {
+            "id": 1000,
+            "name": "Ethan",
+         
+            "gender": "Male",
+            "DOB":"12/03/2009"
+          
+        },
+        {
+          "id": 10001,
+          "name": "sophia",
+          "gender": "Female",
+          "DOB":"06/05/2001"
+        
+      }
+      ,
+        {
+          "id": 10002,
+          "name": "Isabella",
+    
+          "gender": "Female",
+          "DOB":"25/01/1999"
+        
+      }
+     
+    
+    ]
+  }
+  

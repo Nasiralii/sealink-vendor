@@ -1,0 +1,623 @@
+<div class="flex">
+    <div class="layout-sidebar bg-white h-screen">
+        <div class="sidebar-scroll-content">
+            <app-sidebar></app-sidebar>
+        </div>
+    </div>
+    <div class="layout-main Full404 w-full">
+        <section class="vendorDashBoard">
+            <div class="SubheadLeave">
+                <div class="detail-page-header d-flex align-items-center justify-content-between">
+                    <!-- TODO: enable for debugging -->
+                    <!-- <div *ngIf="rfqDetailForm"><pre>{{rfqDetailForm.value | json}}</pre></div> -->
+                    <div class="head">Quotation</div>
+                    <div class="all-leaves-box-rt-r d-flex align-items-center justify-content-between gap-2 mb-2">
+
+                        <div class="page-status"><span>{{rfqsDetailData.rfqStatus}}</span></div>
+                        <!-- <div class="page-status processing-status" *ngif="rfqsDetailData.rfqStatus == 'Processing'">
+                            <span>Processing</span>
+                        </div>
+                        <div class="page-status submit-status d-none">
+                            <span>Submitted</span>
+                        </div>
+                        <div class="page-status rejected-status d-none">
+                            <span>Accepted</span>
+                        </div>
+                        <div class="page-status accepted-status d-none">
+                            <span>Rejected</span>
+                        </div> -->
+
+                        <div class="close" pTooltip="Close" tooltipPosition="top">
+                            <svg id="Component_927_1" data-name="Component 927 – 1" xmlns="http://www.w3.org/2000/svg"
+                                width="35" height="35" viewBox="0 0 28 28">
+                                <rect id="Rectangle_5" data-name="Rectangle 5" width="28" height="28" rx="4"
+                                    fill="#ddd" />
+                                <g id="Group_17986" data-name="Group 17986">
+                                    <path id="Path_59503" data-name="Path 59503"
+                                        d="M12,10.587l4.95-4.95,1.414,1.414L13.415,12l4.95,4.95L16.95,18.365,12,13.415l-4.95,4.95L5.637,16.95,10.587,12l-4.95-4.95L7.051,5.637Z"
+                                        transform="translate(2.363 2.363)" fill="#707070" />
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div class="reject d-none" pTooltip="Reject" tooltipPosition="top" (click)="showDialogRej()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 28 28">
+                                <g id="Group_18395" data-name="Group 18395" transform="translate(-7606 168)">
+                                    <rect id="Rectangle_15910" data-name="Rectangle 15910" width="28" height="28" rx="4"
+                                        transform="translate(7606 -168)" fill="#ddd" />
+                                    <g id="Group_18342" data-name="Group 18342" transform="translate(7608 -166)">
+                                        <path id="Path_91489" data-name="Path 91489" d="M0,0H24V24H0Z" fill="none" />
+                                        <path id="Path_91490" data-name="Path 91490"
+                                            d="M3,12a9,9,0,1,0,9-9,9,9,0,0,0-9,9" fill="none" stroke="#707070"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                        <path id="Path_91491" data-name="Path 91491" d="M5.7,5.7,18.3,18.3" fill="none"
+                                            stroke="#707070" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="1.5" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="edit d-none" pTooltip="Save as draft" tooltipPosition="top" (click)="showDialogRej()">
+                            <svg id="Component_931_3" data-name="Component 931 – 3" xmlns="http://www.w3.org/2000/svg"
+                                width="35" height="35" viewBox="0 0 28 28">
+                                <rect id="Rectangle_15910" data-name="Rectangle 15910" width="28" height="28" rx="4"
+                                    fill="#ddd" />
+                                <g id="Group_18456" data-name="Group 18456" transform="translate(2 2)">
+                                    <path id="Path_91528" data-name="Path 91528" d="M0,0H24V24H0Z" fill="none" />
+                                    <path id="Path_91529" data-name="Path 91529"
+                                        d="M19,8.75H15A1.752,1.752,0,0,1,13.25,7V3a.75.75,0,0,1,1.5,0V7a.25.25,0,0,0,.25.25h4a.75.75,0,0,1,0,1.5Z"
+                                        fill="#707070" />
+                                    <path id="Path_91530" data-name="Path 91530"
+                                        d="M17,21.75H7A2.753,2.753,0,0,1,4.25,19V5A2.753,2.753,0,0,1,7,2.25h7a.75.75,0,0,1,.53.22l5,5a.75.75,0,0,1,.22.53V19A2.753,2.753,0,0,1,17,21.75ZM7,3.75A1.251,1.251,0,0,0,5.75,5V19A1.251,1.251,0,0,0,7,20.25H17A1.251,1.251,0,0,0,18.25,19V8.311L13.689,3.75Z"
+                                        fill="#707070" />
+                                    <path id="Path_91531" data-name="Path 91531"
+                                        d="M10,18.75H8A.75.75,0,0,1,7.25,18V16a.75.75,0,0,1,.22-.53l5-5A2.164,2.164,0,1,1,15.53,13.53l-5,5A.75.75,0,0,1,10,18.75Zm-1.25-1.5h.939l4.78-4.78a.664.664,0,0,0-.939-.939l-4.78,4.78Z"
+                                        fill="#707070" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="approve" pTooltip="Accept" tooltipPosition="top" (click)="showDialog()"
+                            label="Show">
+                            <!-- *ngif="rfqsDetailData.rfqStatus == 'Processing'" -->
+                            <svg id="Component_931_5" data-name="Component 931 - 5" xmlns="http://www.w3.org/2000/svg"
+                                width="35" height="35" viewBox="0 0 28 28">
+                                <rect id="Rectangle_15910" data-name="Rectangle 15910" width="28" height="28" rx="4"
+                                    fill="#ddd" />
+                                <g id="Group_18324" data-name="Group 18324" transform="translate(2 2)">
+                                    <path id="Path_91476" data-name="Path 91476" d="M0,0H24V24H0Z" fill="none" />
+                                    <path id="Path_91477" data-name="Path 91477"
+                                        d="M12,14.75a.748.748,0,0,1-.53-.22l-3-3A.75.75,0,0,1,9.53,10.47L12,12.939l7.47-7.47A.75.75,0,1,1,20.53,6.53l-8,8A.748.748,0,0,1,12,14.75Z"
+                                        fill="#707070" />
+                                    <path id="Path_91478" data-name="Path 91478"
+                                        d="M18,20.75H6A2.753,2.753,0,0,1,3.25,18V6A2.753,2.753,0,0,1,6,3.25h9a.75.75,0,0,1,0,1.5H6A1.251,1.251,0,0,0,4.75,6V18A1.251,1.251,0,0,0,6,19.25H18A1.251,1.251,0,0,0,19.25,18V12a.75.75,0,0,1,1.5,0v6A2.753,2.753,0,0,1,18,20.75Z"
+                                        fill="#707070" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="add-fiedls">
+                    <div class="all-leaves bg-white">
+                        <div class="reqTopLeft">
+                            <div class="requistion-details">
+                                <div class="reqDetailsItem">
+                                    <div class="reqIcons">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20"
+                                            viewBox="0 0 16 20" fill="none">
+                                            <path
+                                                d="M9.586 0C10.1164 0.000113275 10.625 0.210901 11 0.586L15.414 5C15.7891 5.37499 15.9999 5.88361 16 6.414V18C16 18.5304 15.7893 19.0391 15.4142 19.4142C15.0391 19.7893 14.5304 20 14 20H2C1.46957 20 0.960859 19.7893 0.585786 19.4142C0.210714 19.0391 0 18.5304 0 18V2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H9.586ZM8 2H2V18H14V8H9.5C9.10218 8 8.72064 7.84196 8.43934 7.56066C8.15804 7.27936 8 6.89782 8 6.5V2ZM11 12C11.2652 12 11.5196 12.1054 11.7071 12.2929C11.8946 12.4804 12 12.7348 12 13C12 13.2652 11.8946 13.5196 11.7071 13.7071C11.5196 13.8946 11.2652 14 11 14H5C4.73478 14 4.48043 13.8946 4.29289 13.7071C4.10536 13.5196 4 13.2652 4 13C4 12.7348 4.10536 12.4804 4.29289 12.2929C4.48043 12.1054 4.73478 12 5 12H11ZM6 8C6.26522 8 6.51957 8.10536 6.70711 8.29289C6.89464 8.48043 7 8.73478 7 9C7 9.26522 6.89464 9.51957 6.70711 9.70711C6.51957 9.89464 6.26522 10 6 10H5C4.73478 10 4.48043 9.89464 4.29289 9.70711C4.10536 9.51957 4 9.26522 4 9C4 8.73478 4.10536 8.48043 4.29289 8.29289C4.48043 8.10536 4.73478 8 5 8H6ZM10 2.414V6H13.586L10 2.414Z"
+                                                fill="#707070" />
+                                        </svg>
+                                    </div>
+                                    <div class="reqItemInfo">
+                                        <div class="reqItemTitle">RFQ No</div>
+                                        <div class="reqItemVal">{{rfqsDetailData.rfqNumber}}</div>
+                                    </div>
+                                </div>
+                                <div class="reqDetailsItem">
+                                    <div class="reqIcons">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M17 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9V3H15V1H17V3ZM4 9V19H20V9H4ZM6 13H11V17H6V13Z"
+                                                fill="#707070" />
+                                        </svg>
+                                    </div>
+                                    <div class="reqItemInfo">
+                                        <div class="reqItemTitle">
+                                            Requested Date
+                                        </div>
+                                        <div class="reqItemVal">{{rfqsDetailData.rfqDate | date}}</div>
+                                    </div>
+                                </div>
+
+                                <div class="reqDetailsItem">
+                                    <div class="reqIcons">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M17 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9V3H15V1H17V3ZM4 9V19H20V9H4ZM6 13H11V17H6V13Z"
+                                                fill="#707070" />
+                                        </svg>
+                                    </div>
+                                    <div class="reqItemInfo">
+                                        <div class="reqItemTitle">
+                                            Expected Date
+                                        </div>
+                                        <div class="reqItemVal">{{rfqsDetailData.rfqExpectedArrivalDate | date}}</div>
+                                    </div>
+                                </div>
+
+                                <div class="reqDetailsItem">
+                                    <div class="reqIcons">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M17 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9V3H15V1H17V3ZM4 9V19H20V9H4ZM6 13H11V17H6V13Z"
+                                                fill="#707070" />
+                                        </svg>
+                                    </div>
+                                    <div class="reqItemInfo">
+                                        <div class="reqItemTitle">Company Name</div>
+                                        <div class="reqItemVal">{{rfqsDetailData.CompanyName}}</div>
+                                    </div>
+                                </div>
+                                <div class="reqDetailsItem">
+                                    <div class="reqIcons">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M17 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9V3H15V1H17V3ZM4 9V19H20V9H4ZM6 13H11V17H6V13Z"
+                                                fill="#707070" />
+                                        </svg>
+                                    </div>
+                                    <div class="reqItemInfo">
+                                        <div class="reqItemTitle">
+                                            Order Deadline
+                                        </div>
+                                        <div class="reqItemVal">{{rfqsDetailData.rfqOrderDeadLineDate | date}}</div>
+                                    </div>
+                                </div>
+                                <div class="reqDetailsItem">
+                                    <div class="reqIcons">
+                                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11 17.9998H13V4.99979L19.3939 7.74004C19.7616 7.89762 20 8.25916 20 8.65919V17.9998H22V19.9998H0V17.9998H2V4.64966C2 4.25448 2.23273 3.89635 2.59386 3.73585L10.2969 0.312266C10.5493 0.200106 10.8448 0.313756 10.9569 0.566096C10.9853 0.630026 11 0.699206 11 0.769166V17.9998Z"
+                                                fill="#707070" />
+                                        </svg>
+
+                                    </div>
+                                    <div class="reqItemInfo">
+                                        <div class="reqItemTitle">Vessel Name</div>
+                                        <div class="reqItemVal">{{rfqsDetailData.VesselName}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form [formGroup]="rfqDetailForm">
+                        <section class="payment-term bg-white">
+                            <div class="col-12 lg:col-6">
+                                <label class="font-semibold d-block mb-2">Payment Terms :</label>
+                                <p>
+                                    {{rfqsDetailData.PaymentTerm}}
+                                </p>
+                            </div>
+                            <div class="grid col-12" formGroupName="insertQuotation">
+                                <div class="col-12 lg:col-3">
+                                    <label class="d-block mb-1">IncoTerm<span style="color: red">*</span></label>
+
+                                    <p-dropdown [options]="incoTermList" placeholder="Choose IncoTerm"
+                                        optionLabel="incoTermsName" optionValue="incoTermsUID" [filter]="true"
+                                        filterBy="incoTermsName" formControlName="rfqIncoTermUID"
+                                        [showClear]="true"></p-dropdown>
+                                </div>
+
+                                <div class="col-12 lg:col-3">
+                                    <label class="d-block mb-1">Location<span style="color: red">*</span></label>
+                                    <input type="text" class="text-input" formControlName="rfqIncoTermValue"
+                                        pInputText />
+                                </div>
+                            </div>
+                            <!-- </form> -->
+
+                            <!-- <section class="journalCreattable mb-3" style="margin-top: 20px">
+                                <p-table class="taable" [value]="itemRequisitionDetailData"
+                                    [tableStyle]="{ 'min-width': '50rem' }">
+                                    <ng-template pTemplate="header">
+                                        <tr>
+
+                                            <th style="width: 4rem"><p-tableHeaderCheckbox /></th>
+
+                                            <th>SL No</th>
+                                            <th>
+                                                <span class="vertical-border"></span><span class="table-text">Item
+                                                    Name</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span class="table-text">ROB</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span class="table-text">Req.
+                                                    Qty</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span class="table-text">Fulfilled
+                                                    Quantity</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span class="table-text">Unit</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span class="table-text">Unit
+                                                    Price</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span class="table-text">Total
+                                                    Price</span>
+                                            </th>
+                                        </tr>
+                                    </ng-template>
+                                    <ng-template class="taableBdy" let-product let-i="rowIndex" pTemplate="body">
+                                        <tr>
+                                        <td>
+                                        <p-tableCheckbox [value]="product" />
+                                        </td>
+                                            <td>{{ i + 1 }}</td>
+                                            <td>{{ product.vaProductName }}</td>
+                                            <td>{{ product.rfqItemROB }}</td>
+                                            <td>{{ product.rfqQuantity }}</td>
+                                            <td>{{ product.fulfilledQty }}</td>
+                                            <td>{{ product.unitName }}</td>
+                                            <td>{{ product.unitPrice }}</td>
+                                            <td>{{ product.totalPrice }}</td>
+                                        </tr>
+                                    </ng-template>
+                                </p-table>
+                            </section> -->
+                            <section class="journalCreattable mb-3 z-5" style="margin-top: 20px">
+                                <p-table class="taable" [value]="itemRequisitionDetailData"
+                                    [tableStyle]="{ 'min-width': '50rem' }">
+                                    <ng-template pTemplate="header">
+                                        <tr>
+                                            <th style="width: 4rem"> <p-tableHeaderCheckbox /> </th>
+
+                                            <th>SL No</th>
+                                            <th>
+                                                <span class="vertical-border"></span><span class="table-text">Item
+                                                    Name</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span
+                                                    class="table-text">Req.Make/Quality</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span
+                                                    class="table-text">Make</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span
+                                                    class="table-text">Quantity</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span class="table-text">Expected
+                                                    Delivery</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span
+                                                    class="table-text">Req.Qty</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span class="table-text">Fulfilled
+                                                    Quantity</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span
+                                                    class="table-text">Unit</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span class="table-text">Unit
+                                                    Price</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span class="table-text">Total
+                                                    Price</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span
+                                                    class="table-text">Remarks</span>
+                                            </th>
+                                            <th>
+                                                <span class="vertical-border"></span><span class="table-text">Vendor
+                                                    Document</span>
+                                            </th>
+                                        </tr>
+                                    </ng-template>
+                                    <ng-template class="taableBdy" let-product let-i="rowIndex" pTemplate="body"
+                                        formGroupName="setQuotations">
+                                        <tr>
+                                            <td>
+                                                <p-tableCheckbox [value]="product" />
+                                            </td>
+                                            <td>{{ i + 1 }}</td>
+                                            <td> {{product.vaProductName}} </td>
+                                            <td>{{product.ProductQualityName}}</td>
+                                            <td>
+                                                <input type="text" class="text-input" placeholder="Maker"
+                                                    formControlName="rfqVendorMake" pInputText />
+                                            </td>
+                                            <td><p-dropdown [options]="quality" placeholder="Select Quality" appendTo="body"
+                                                    optionLabel="Title" formControlName="vendorQualityUID"
+                                                    optionValue="masterUID" [showClear]="true" [filter]="true"
+                                                    filterBy="Title"></p-dropdown></td>
+                                            <!-- <td>{{product.rfqQuantity}}</td> -->
+                                            <td>
+                                                <!-- {{product.rfqVendorExpectedDeliveryDate | date}} -->
+                                                <p-calendar [showIcon]="true" inputId="icon" appendTo="body"
+                                                    placeholder="Expected Delivery Date"
+                                                    formControlName="rfqVendorExpectedDeliveryDate"
+                                                    placeholder="Choose Expected Delivery Date"
+                                                    dateFormat="dd M yy"></p-calendar>
+                                            </td>
+
+                                            <td class="mx-8">{{product.rfqQuantity || 0}}</td>
+                                            <td class="mx-8">
+                                                <input type="number" class="text-input" formControlName="vendorQuantity"
+                                                    placeholder="Fulfilled Quantity" (change)="totalPrice()"
+                                                    pInputText />
+                                            </td>
+                                            <td>{{ product.unitName }}</td>
+                                            <td class="mx-8">
+                                                <input type="number" class="text-input"
+                                                    formControlName="vendorUnitPrice" placeholder="Unit Price"
+                                                    pInputText (change)="totalPrice()" />
+                                            </td>
+                                            <td>{{ total_price }}</td>
+                                            <td class="mx-8"><input type="text" class="text-input"
+                                                    formControlName="rfqVendorReason" placeholder="Remarks"
+                                                    pInputText /></td>
+                                            <td></td>
+                                        </tr>
+                                    </ng-template>
+                                    <ng-template class="taableBdy" let-product let-i="rowIndex" pTemplate="body" *ngif="rfqsDetailData.rfqStatus == 'Processed'">
+                                        <tr>
+                                            <td>
+                                                <p-tableCheckbox [value]="product" />
+                                            </td>
+                                            <td>{{ i + 1 }}</td>
+                                            <td>{{product.vaProductName}} </td>
+                                            <td>{{product.ProductQualityName}}</td>
+                                            <td>{{product.rfqVendorMake}}</td>
+                                            <td>{{product.rfqQuantity}}</td>
+                                            <td>
+                                                {{product.rfqVendorExpectedDeliveryDate | date}}
+                                            </td>
+                                            <td class="mx-8">{{product.rfqQuantity || 0}}</td>
+                                            <td class="mx-8">
+                                                {{ product.vendorQuantity }}
+                                            </td>
+                                            <td>{{ product.unitName }}</td>
+                                            <td class="mx-8">
+                                                {{ product.vendorUnitPrice }}
+                                            </td>
+                                            <td>{{ product.vendorUnitPrice * product.rfqQuantity }}</td>
+                                            <td class="mx-8">
+                                                {{ product.rfqVendorReason }}
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </ng-template>
+                                </p-table>
+                            </section>
+
+                            <div class="terms-details mb-3">
+                                <p class="term-title mb-4 font-bold">
+                                    Terms and Conditions for Test Company
+                                </p>
+                                <p class="term-title mb-2 font-bold">Introduction</p>
+                                <p class="mb-4">
+                                    These Website Standard Terms and Conditions written
+                                    on this webpage shall manage your use of oudfr
+                                    website, Sealink accessible at
+                                    http://sealink.bytewavetechnologies.com/portal/web?menu_id=101&amp;snav_id=301&amp;f_id=501&.
+                                    These Terms will be applied fully and affect to your
+                                    use of this Website. By using this Website, you
+                                    agreed to accept all terms and conditions written in
+                                    here. You must not use this Website if you disagree
+                                    with any of these Website Standard Terms and
+                                    Conditions. These Terms and Conditions have been
+                                    generated with the help of theTerms And Conditiions
+                                    Sample Generator. Minors or people below 18 years
+                                    old are not allowed to use this Website.
+                                </p>
+
+                                <p class="term-title mb-2 font-bold">
+                                    Intellectual Property Rights
+                                </p>
+                                <p class="mb-4">
+                                    Other than the content you own, under these Terms,
+                                    Test Company and/or its licensors own all the
+                                    intellectual property rights and materials contained
+                                    in this Website. You are granted limited
+                                    license only for purposes of viewing the material
+                                    contained on this Website.
+                                </p>
+
+                                <p class="term-title mb-2 font-bold">Restrictions</p>
+                                <ol class="pl-3 d-flex flex-column gap-2 align-items-start">
+                                    <li>
+                                        publishing any Website material in any other
+                                        media;
+                                    </li>
+                                    <li>
+                                        selling, sublicensing and/or otherwise
+                                        commercializing any Website material;
+                                    </li>
+                                    <li>
+                                        publicly performing and/or showing any Website
+                                        material;
+                                    </li>
+                                    <li>
+                                        using this Website in any way that is or may be
+                                        damaging to this Website;
+                                    </li>
+                                    <li>
+                                        using this Website in any way that impacts user
+                                        access to this Website;
+                                    </li>
+                                    <li>
+                                        using this Website contrary to applicable laws
+                                        and regulations, or in any way may cause harm to
+                                        the Website, or to any person or business
+                                        entity;
+                                    </li>
+                                    <li>
+                                        engaging in any data mining, data harvesting,
+                                        data extracting or any other similar activity in
+                                        relation to this Website;
+                                    </li>
+                                    <li>
+                                        using this Website to engage in any advertising
+                                        or marketing.
+                                    </li>
+                                </ol>
+                                <p>
+                                    Certain areas of this Website are restricted from
+                                    being access by you and Test Company may further
+                                    restrict access by you to any areas of this Website,
+                                    at any time, in absolute discretion. Any user ID and
+                                    password you may have for this Website are
+                                    confidential and you must maintain confidentiality
+                                    as well.
+                                </p>
+                            </div>
+                            <div class="sec-lower" formGroupName="insertQuotation">
+                                <div class="description mb-3">
+                                    <div class="font-bold" style="margin-bottom: 10px">
+                                        Remarks
+                                    </div>
+                                    <textarea class="w-full text-area no-resize" rows="5" cols="30" pInputTextarea
+                                        formControlName="remarks"></textarea>
+                                </div>
+                                <div class="description">
+                                    <div class="font-bold" style="margin-bottom: 10px">
+                                        Attach File(s)
+                                    </div>
+                                    <div class="fileUpload">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="39"
+                                            viewBox="0 0 38 39" fill="none">
+                                            <path
+                                                d="M10.2918 32.1663C7.88516 32.1663 5.83211 31.3377 4.13266 29.6805C2.43322 28.0127 1.5835 25.9808 1.5835 23.5847C1.5835 21.5263 2.201 19.6897 3.436 18.0747C4.68155 16.4597 6.30711 15.4305 8.31266 14.9872C8.97766 12.5594 10.2971 10.5961 12.271 9.09717C14.2554 7.58773 16.4985 6.83301 19.0002 6.83301C22.0929 6.83301 24.7107 7.90967 26.8535 10.063C29.0068 12.2058 30.0835 14.8236 30.0835 17.9163C31.9096 18.1275 33.4191 18.9191 34.6118 20.2913C35.8152 21.6425 36.4168 23.2258 36.4168 25.0413C36.4168 27.0258 35.7254 28.7094 34.3427 30.0922C32.9599 31.475 31.2763 32.1663 29.2918 32.1663H20.5835C19.7179 32.1663 18.9738 31.8549 18.351 31.2322C17.7282 30.62 17.4168 29.8758 17.4168 28.9997V20.8455L14.8835 23.2997L12.6668 21.083L19.0002 14.7497L25.3335 21.083L23.1168 23.2997L20.5835 20.8455V28.9997H29.2918C30.4002 28.9997 31.3343 28.6144 32.0943 27.8438C32.8649 27.0838 33.2502 26.1497 33.2502 25.0413C33.2502 23.933 32.8649 22.9988 32.0943 22.2388C31.3343 21.4683 30.4002 21.083 29.2918 21.083H26.9168V17.9163C26.9168 15.7313 26.1463 13.863 24.6052 12.3113C23.0641 10.7702 21.1957 9.99967 19.0002 9.99967C16.8152 9.99967 14.9468 10.7702 13.3952 12.3113C11.8541 13.863 11.0835 15.7313 11.0835 17.9163H10.2918C8.76127 17.9163 7.45766 18.46 6.381 19.5472C5.29377 20.6238 4.75016 21.9275 4.75016 23.458C4.75016 24.9886 5.29377 26.308 6.381 27.4163C7.45766 28.4719 8.76127 28.9997 10.2918 28.9997H14.2502V32.1663"
+                                                fill="#D0D5DD" />
+                                        </svg>
+                                        <span *ngIf="!fileName">Upload</span>
+                                        <div *ngIf="fileName" class="fileName">
+                                            {{ fileName }}
+                                        </div>
+
+                                        <input type="file" class="inputfile" (change)="onFileSelected($event)" />
+                                    </div>
+
+                                    <!-- Display the selected file name -->
+                                </div>
+                            </div>
+                        </section>
+                    </form>
+                    <!-- <section class="productInformation">
+                    <div class="product-infos gap-3">
+                        <div class="info d-flex align-items-center px-3">
+                            <span class=" value">Shipping Address</span><span class="colan">:</span>
+                            <span class="label">
+                                <ul class="d-flex flex-column align-items-start gap-2"
+                                    style="color: #A9AFB9;list-style-type: none;">
+                                    <li>Anu, 23423434,</li>
+                                    <li>Logans road, Tly</li>
+                                    <li>4534454( Pin )</li>
+                                    <li>534343454 ( Phone )</li>
+                                </ul>
+                            </span>
+                        </div>
+                        <div class=" d-flex flex-column align-items-start">
+                            <div class="info mb-3 w-full p-3">
+                                <span class="value">Requested Date</span><span class="colan">:</span>
+                                <span class="label">20-06-2024</span>
+                            </div>
+                            <div class="info w-full p-3">
+                                <span class="value">Requested By</span>
+                                <span class="colan">:</span>
+                                <span class="label">Micah Mariam Joseph</span>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+
+
+                    <section class="terms-section">
+                        <div class="col-12 lg:col-6 px-0 d-none">
+                            <label class="font-semibold d-block mb-2">Payment Terms :</label>
+                            <p>
+                                50% Payment In Advance Against Order/ PI And Balance
+                                After Readiness Of Order Terms And Conditions
+                            </p>
+                        </div>
+
+                        <!-- <div class="col-12 lg:col-6 px-0 ">
+                        <label class="font-semibold d-block mb-2">Payment Terms :</label>
+                        <p>Custom</p>
+                    </div> -->
+
+                        <!-- <div class="grid col-12 px-0">
+                        <div class="col-12 lg:col-12">
+                            <label class="d-block font-semibold mb-2">Remark</label>
+                            <input type="text" pInputText />
+                        </div>
+                    </div> -->
+
+                        <!-- <p class="mb-2 font-semibold">Terms And Conditions</p> -->
+
+                        <!-- <div class="grid col-12 px-0">
+
+                        <div class="sec-lower">
+                            <div class="description">
+                                <div class="fileUpload" style="width: 267px;">
+
+                                    <span>Introduction-to-RPA-Testing.pdf</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="39" viewBox="0 0 38 39"
+                                        fill="none">
+                                        <path
+                                            d="M10.2918 32.1663C7.88516 32.1663 5.83211 31.3377 4.13266 29.6805C2.43322 28.0127 1.5835 25.9808 1.5835 23.5847C1.5835 21.5263 2.201 19.6897 3.436 18.0747C4.68155 16.4597 6.30711 15.4305 8.31266 14.9872C8.97766 12.5594 10.2971 10.5961 12.271 9.09717C14.2554 7.58773 16.4985 6.83301 19.0002 6.83301C22.0929 6.83301 24.7107 7.90967 26.8535 10.063C29.0068 12.2058 30.0835 14.8236 30.0835 17.9163C31.9096 18.1275 33.4191 18.9191 34.6118 20.2913C35.8152 21.6425 36.4168 23.2258 36.4168 25.0413C36.4168 27.0258 35.7254 28.7094 34.3427 30.0922C32.9599 31.475 31.2763 32.1663 29.2918 32.1663H20.5835C19.7179 32.1663 18.9738 31.8549 18.351 31.2322C17.7282 30.62 17.4168 29.8758 17.4168 28.9997V20.8455L14.8835 23.2997L12.6668 21.083L19.0002 14.7497L25.3335 21.083L23.1168 23.2997L20.5835 20.8455V28.9997H29.2918C30.4002 28.9997 31.3343 28.6144 32.0943 27.8438C32.8649 27.0838 33.2502 26.1497 33.2502 25.0413C33.2502 23.933 32.8649 22.9988 32.0943 22.2388C31.3343 21.4683 30.4002 21.083 29.2918 21.083H26.9168V17.9163C26.9168 15.7313 26.1463 13.863 24.6052 12.3113C23.0641 10.7702 21.1957 9.99967 19.0002 9.99967C16.8152 9.99967 14.9468 10.7702 13.3952 12.3113C11.8541 13.863 11.0835 15.7313 11.0835 17.9163H10.2918C8.76127 17.9163 7.45766 18.46 6.381 19.5472C5.29377 20.6238 4.75016 21.9275 4.75016 23.458C4.75016 24.9886 5.29377 26.308 6.381 27.4163C7.45766 28.4719 8.76127 28.9997 10.2918 28.9997H14.2502V32.1663"
+                                            fill="#D0D5DD" />
+                                    </svg>
+                                    <input type="file" class="inputfile" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="d-block font-semibold mb-1">IncoTerm</label>
+                            <input type="text" pInputText placeholder="Carriage and Insurance Paid To" />
+                        </div>
+
+                        <div class="col-12">
+                            <label class="d-block font-semibold mb-1">Location</label>
+                            <input type="text" pInputText />
+                        </div>
+                    </div> -->
+                    </section>
+                </div>
+            </div>
+        </section>
+        <p-dialog header="Confirm" [modal]="true" [(visible)]="showApprovalDialog" [style]="{ width: '25rem' }">
+            <span class="p-text-secondary block m-5">
+                Confirm to save changes
+            </span>
+            <div class="flex justify-content-center gap-2 mb-3">
+                <p-button class="cancel-btn" label="Save" (onClick)="submitQuotation()" />
+                <p-button label="cancel" (onClick)="showApprovalDialog = false" />
+            </div>
+        </p-dialog>
+    </div>
+</div>
+<app-footer></app-footer>

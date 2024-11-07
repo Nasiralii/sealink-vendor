@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="21" viewBox="0 0 21 21">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_16070" data-name="Rectangle 16070" width="21" height="21" transform="translate(1491 3343)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_16" data-name="Mask Group 16" transform="translate(-1491 -3343)" clip-path="url(#clip-path)">
+    <g id="Search_results_for_Qualification_-_Flaticon-12" data-name="Search results for Qualification - Flaticon-12" transform="translate(1492.579 3343)">
+      <path id="Path_88342" data-name="Path 88342" d="M17.842,13.576a3.7,3.7,0,0,0-3.076-3.64V.615A.615.615,0,0,0,14.15,0H4.307a.62.62,0,0,0-.435.18L.18,3.871A.621.621,0,0,0,0,4.307V16.652a.615.615,0,0,0,.615.615H11.074v3.117a.615.615,0,0,0,.89.55l2.186-1.093,2.186,1.093a.615.615,0,0,0,.89-.55v-4.77A3.67,3.67,0,0,0,17.842,13.576Zm-1.23,0a2.461,2.461,0,1,1-2.461-2.461A2.464,2.464,0,0,1,16.611,13.576ZM3.691,2.1V3.691H2.1ZM1.23,16.037V4.922H4.307a.615.615,0,0,0,.615-.615V1.23h8.613V9.936a3.689,3.689,0,0,0-2.461,5.678v.423ZM14.425,18.6a.616.616,0,0,0-.55,0l-1.571.785V16.772a3.685,3.685,0,0,0,3.691,0v2.617Zm0,0" fill="#247dd4"/>
+      <path id="Path_88343" data-name="Path 88343" d="M12.92,13.576a1.23,1.23,0,1,0,1.23-1.23A1.232,1.232,0,0,0,12.92,13.576ZM3.076,7.424h8.613a.615.615,0,1,0,0-1.23H3.076a.615.615,0,0,0,0,1.23Zm0,2.461h8.613a.615.615,0,1,0,0-1.23H3.076a.615.615,0,0,0,0,1.23ZM6.768,4.922h4.922a.615.615,0,1,0,0-1.23H6.768a.615.615,0,1,0,0,1.23Zm2.461,6.193H3.076a.615.615,0,0,0,0,1.23H9.229a.615.615,0,0,0,0-1.23Zm0,0" fill="#247dd4"/>
+    </g>
+  </g>
+</svg>

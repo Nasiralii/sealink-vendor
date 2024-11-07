@@ -1,0 +1,362 @@
+@import "../../../../../assets/web/mixin";
+
+.SubheadLeave {
+    padding: 40px 32px;
+    background-color: #fff;
+
+    .all-leaves {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        padding-bottom: 8px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid rgb(237, 234, 234);
+
+        .reqTopLeft {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .requistion-details {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px 32px;
+
+                .reqDetailsItem {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 6px;
+
+                    .reqItemInfo {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: start;
+                        font-size: 12px;
+
+                        .reqItemTitle {
+                            font-weight: 600;
+                        }
+                    }
+
+                    .reqIcons {
+                        width: 32px;
+                        height: 32px;
+                        border: 1px solid #e2e5e9;
+                        border-radius: 4px;
+                        background-color: #f7f9fa;
+                        position: relative;
+
+                        svg {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .head {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2d2d2d;
+            white-space: nowrap;
+        }
+
+        .all-leaves-box-rt-r {
+            display: flex;
+            justify-content: space-between;
+            align-items: normal;
+            gap: 8px;
+            .statusLabel {
+                height: 28px;
+                width: 69px;
+                border: 1px solid #e9ecef;
+                border-radius: 4px;
+                background-color: #fbf4e8;
+                position: relative;
+                color: #d29221;
+
+                span {
+                    font-size: 12px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+
+    .add-fiedls {
+        border: 1px solid rgb(242, 238, 238);
+        border-radius: 5px;
+        margin-top: 5px;
+        padding: 8px 19px 19px 19px;
+
+        h5 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .product-infos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            @include breakpoint(mx767) {
+                grid-template-columns: 1fr;
+            }
+
+            justify-content: start;
+            align-items: center;
+            row-gap: 16px;
+
+            .info {
+                display: grid;
+                grid-template-columns: 1fr 20px 1fr;
+
+                .label {
+                    width: 182px;
+                    color: #707070;
+                }
+
+                .value {
+                    font-weight: 600;
+                }
+
+                @include breakpoint(mx375) {
+                    grid-template-columns: 1fr;
+
+                    .colan {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .description {
+            margin-top: 16px;
+            .descrtext {
+                width: 100%;
+                border: 1px solid #ebeef1;
+                border-radius: 6px;
+                padding: 12px;
+                margin-top: 8px;
+            }
+        }
+
+        .fileupload {
+            .dang-goods {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 9px;
+            }
+        }
+
+        .productInformation {
+            margin: 0px 0px 22px 0px;
+
+            .description {
+                margin-top: 16px;
+
+                .descrtext {
+                    margin-top: 5px;
+                }
+            }
+
+            .top-tik {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+
+                @include breakpoint(mx767) {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                @include breakpoint(mx480) {
+                    grid-template-columns: 1fr;
+                }
+
+                row-gap: 10px;
+                list-style: none;
+                border-bottom: 1px solid #dddddd;
+                padding-bottom: 14px;
+                padding: 0px 0px 14px 0px;
+
+                li {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 8px;
+                }
+            }
+        }
+    }
+}
+
+:host ::ng-deep .journelCreattable {
+    .p-inputtext {
+        border: none;
+
+        &:hover,
+        &:focus {
+            border: 1px solid #e2e5e9;
+        }
+    }
+
+    .p-dropdown {
+        border: none;
+
+        &:hover,
+        &:focus {
+            border: 1px solid #e2e5e9;
+        }
+
+        &:not(.p-disabled).p-focus {
+            box-shadow: none;
+            border: 1px solid #5774f1;
+        }
+
+        .p-inputtext {
+            border: none !important;
+        }
+    }
+
+    .del-iconn {
+        visibility: hidden;
+    }
+
+    tr:hover {
+        .del-iconn {
+            visibility: visible;
+        }
+    }
+}
+
+.dialogRej {
+    .dialogRejtop {
+        text-align: center;
+
+        .rejtitle {
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+}
+
+:host ::ng-deep .p-inputtext {
+    width: 100%;
+    height: 36px;
+}
+
+:host ::ng-deep .description .p-inputtext {
+    width: 100%;
+    height: 111px;
+}
+
+:host ::ng-deep .p-dropdown {
+    width: 100%;
+}
+
+:host ::ng-deep .p-calendar {
+    width: 100%;
+    height: 36px;
+}
+
+.fileuplodd {
+    .chooseFileContain {
+        .chooseFileSec {
+            width: 100px;
+            height: 32px;
+            border: 1px dashed #afafaf;
+            border-radius: 4px;
+            padding: 16px 7px 16px 7px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 4px;
+
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.leave-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .addLeave {
+        height: 30px;
+        border-radius: 4px;
+        color: #4854e8;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        background-color: #ecedfd;
+        border: 1px solid #f3f3f3;
+        padding: 4px 12px;
+        white-space: nowrap;
+        font-size: 12px;
+        font-weight: 400;
+
+        svg {
+            margin-right: 10px;
+        }
+    }
+}
+
+:host ::ng-deep {
+    .p-datatable .p-datatable-tbody > tr > td {
+        font-size: 12px;
+    }
+
+    .p-datatable .p-datatable-thead > tr > th {
+        font-size: 12px;
+    }
+}
+
+.approveDialog {
+    .description {
+        .modalSubHead {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h4 {
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.sec-lower {
+    margin-top: 14px;
+
+    .uploadedDocs {
+        height: 28px;
+        width: fit-content;
+        border: 1px solid #dddddd;
+        border-radius: 4px;
+        background-color: #f3f3f3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 8px 5px 8px;
+        font-size: 12px;
+    }
+}

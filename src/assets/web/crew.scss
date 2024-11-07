@@ -1,0 +1,231 @@
+.rounded-5 {
+    border-radius: 5px;
+}
+.crew-list-card {
+.crew-list {
+    .p-datatable .p-datatable-thead > tr > th {
+        background-color: #fff;
+        color: #000;
+        padding: 17px 0.8rem !important;
+
+    }
+    .p-datatable .p-datatable-tbody > tr > td {
+        padding: 14px 0.8rem;
+    }
+    .crew-list-card {
+        .p-dataview-content {
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+    
+    }
+    
+}
+
+.p-paginator {
+    justify-content: end;
+    gap: 25px;
+    padding: 20px 10px;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+    .p-paginator-pages {
+        gap: 25px;
+        display: flex;
+    }
+        }
+        .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+            background-color: #ECEDFC;
+            border-color: #ECEDFC;
+            color: #5774F1;
+            font-weight: 600;
+        }
+        .p-paginator .p-paginator-pages .p-paginator-page {
+            font-weight: 600;
+            color: #2D2D2D;
+        }
+    .p-multiselect {
+        width: 250px;
+        border-radius: 7px;
+    }
+    .p-paginator-rpp-options {
+        .p-inputtext {
+            padding: 5px;
+        }
+    }
+    .add-Crew-btn {
+        background-color: #5D79F1;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        padding: 9px 15px;
+        border-radius: 5px;
+        gap: 10px;
+        cursor: pointer;
+    }
+    .p-button.p-button-icon-only {
+        width: 2.5rem;
+        padding: 11px 0;
+    }
+
+    .joined-date {
+        .p-button.p-button-icon-only {
+            padding: 5px 0;
+        }
+    
+    }
+   
+}
+
+.grid-view-col {
+    .p-paginator {
+justify-content: center;
+    } .img-back-color {
+        height: 80px;
+    }
+    .p-datatable-tbody {
+        padding: 0px 10px;
+        display: block;
+        .cardBox {
+            border-radius: 5px;
+        }
+    }
+    
+}
+.gridViewInline {
+    .borderRd {
+        background: #fff;
+    padding: 15px 10px;
+    }
+    
+}
+
+// general info style start here
+.crew-managment-grid {
+    label {
+        font-weight: 500;
+    }
+    .p-dialog-header {
+        padding-top: 15px;
+    }
+    .add-qualification-type {
+        label {
+            margin-bottom: 0px;
+        }
+    }
+    textarea  {
+        height: auto !important;
+    }
+    
+    .custome-fields {
+        .p-inputtext {
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        .addFileBtn {
+            border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+        }
+    }
+    .custome-fields2 {
+        .p-inputtext {
+            border-radius: 7px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+        }
+        .p-button-icon-only {
+            height: 100%;
+            border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+        }
+        .custome-p-fileUpload {
+            display: flex;
+            height: 100%;
+        }
+    }
+
+    .p-tabview .p-tabview-nav li:not(.p-highlight):not(.p-disabled):hover .p-tabview-nav-link {
+        border-color: transparent;
+        border-bottom-color: #dee2e6;
+    }
+    .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+       background-color:  #E4E5FF;
+    }
+    .General-Information-form {
+        label {
+            font-weight: 500;
+        }
+    }
+    .p-inputtext {
+    height: 50px;
+    border-radius: 7px;
+    }
+    
+    .p-dropdown {
+        height: 50px;
+    border-radius: 7px;
+    .p-inputtext {
+display: flex;
+    }
+    .p-button.p-button-icon-only {
+        width: 3rem;
+    }
+    }
+    .p-inputgroup {
+        .p-inputgroup-addon {
+            min-width: 3rem !important;
+        }
+        .p-inputtext {
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+    }
+    .p-calendar {
+        .p-inputgroup-addon {
+            min-width: 3rem !important;
+        }
+    }
+    .depandant {
+        padding: 20px 15px 20px;
+    }
+}
+
+
+.new-table {
+    .p-datatable .p-datatable-thead > tr > th {
+        padding: 18px 0.8rem !important;
+        color: #5D5FEF;
+        background: #E4E5FF;
+}
+.p-datatable .p-datatable-tbody > tr > td {
+    padding: 12px 0.8rem;
+}
+.agAction .ctrlBtn {
+    background-color: #E4E5FF;
+}
+}
+
+.skills-accordion {
+    .p-accordion-header-link {
+        background-color: #E4E5FF !important;
+        color: #5D5FEF !important;
+        padding: 14px 14px !important;
+    }
+    .ctrlBtn {
+        background-color: #E4E5FF;
+    }
+    .p-datatable .p-datatable-tbody > tr > td {
+        padding: 12px;
+    }
+}
+
+.custom-filter {
+    width: 250px; 
+    .p-multiSelect { 
+   
+}
+}
+//  .MobWithCountryCode .p-inputtext {
+//     height: 100% !important;
+//  }

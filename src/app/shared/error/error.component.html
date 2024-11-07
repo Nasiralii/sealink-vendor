@@ -1,0 +1,5 @@
+<div class="form-text">
+  <ng-container  *ngIf="(control?.touched || submitted) && (control?.status && control?.status == 'INVALID')">
+      {{ message }}
+  </ng-container>
+</div>

@@ -1,0 +1,117 @@
+:host ::ng-deep {
+    .container-padding {
+        padding: 0px !important;
+    }
+
+    .vender-login-main {
+        display: flex;
+
+        .login-welcome-col {
+            width: 50%;
+
+            .login-col {
+                width: 350px;
+                padding: 50px 15px;
+                margin: 0px auto;
+            }
+        }
+
+        .vender-login-title {
+            margin-bottom: 50px;
+        }
+
+        .vender-login-form {
+            gap: 20px;
+
+            >div {
+                width: 100%;
+
+                .input-field {
+                    position: relative;
+
+                    .pi {
+                        position: absolute;
+                        left: 14px;
+                        top: 12px;
+                    }
+
+                    .p-inputtext {
+                        width: 100%;
+                        padding: 13px 40px;
+                        border-radius: 8px;
+                        border: 1px solid #E4E7EC;
+                    }
+
+                }
+
+                .p-button {
+                    width: 100%;
+                    padding: 8px 16px;
+                    background-color: transparent;
+                    color: #000;
+                    border: 1px solid #E4E7EC;
+                    border-radius: 8px;
+                }
+            }
+
+            .p-button {
+                width: 100%;
+                padding: 10px 16px;
+                border-radius: 8px;
+            }
+
+            .resgiter-link {
+                border-top: 1px solid rgba(0, 0, 0, 0.103);
+                padding-top: 18px;
+                font-size: 14px;
+                text-align: center;
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+
+
+        .about-vender-login {
+            background-image: url(/assets/images/vender-login-bg.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            min-height: 100vh;
+            width: 50%;
+        }
+
+
+        /* Hide the previous navigation arrow */
+        .p-carousel-prev {
+            display: none !important;
+        }
+
+        /* Hide the next navigation arrow */
+        .p-carousel-next {
+            display: none !important;
+        }
+
+        .about-vender-login {
+            display: flex;
+            align-items: end;
+            padding-bottom: 70px;
+
+            p {
+                width: 50%;
+                opacity: 0.8;
+                margin: 0px auto;
+            }
+
+            .p-carousel .p-carousel-indicators .p-carousel-indicator button {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+            }
+
+            .p-carousel .p-carousel-indicators {
+                padding: 1rem;
+                margin-top: 20px;
+            }
+        }
+    }  
+}

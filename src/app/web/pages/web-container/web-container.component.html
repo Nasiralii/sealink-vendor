@@ -1,0 +1,355 @@
+<p-progressSpinner animationDuration=".5s" *ngIf="IsInProgress" class="loaderCenter"></p-progressSpinner>
+<ng-container [ngSwitch]="actionId">
+    <app-dashboard *ngSwitchCase="'001'" class="container-padding"></app-dashboard>
+    <!-- <app-home *ngSwitchCase="'701'"></app-home> -->
+    <app-sc-input-field *ngSwitchCase="'702'" class="container-padding"></app-sc-input-field>
+    <app-module-wise-master-listing *ngSwitchCase="'703'" class="container-padding"></app-module-wise-master-listing>
+    <app-create-employee *ngSwitchCase="'704'" class="container-padding"></app-create-employee>
+    <app-master-page-listing *ngSwitchCase="'706'" class="container-padding"></app-master-page-listing>
+    <app-masters-details-page-one *ngSwitchCase="'707'" class="container-padding"></app-masters-details-page-one>
+    <app-document-manual-listing *ngSwitchCase="'708'" class="container-padding"></app-document-manual-listing>
+    <app-list-employee *ngSwitchCase="'709'" class="container-padding">
+    </app-list-employee>
+    <app-view-documents *ngSwitchCase="'710'" class="container-padding"></app-view-documents>
+    <app-add-documents *ngSwitchCase="'711'" class="container-padding"></app-add-documents>
+    <app-user-list *ngSwitchCase="'712'" class="container-padding"></app-user-list>
+    <!-- <app-user-create *ngSwitchCase="'713'"></app-user-create> -->
+    <app-user-role-configure *ngSwitchCase="'713'" class="container-padding"></app-user-role-configure>
+    <app-vessel-create *ngSwitchCase="'714'" class="container-padding"></app-vessel-create>
+    <app-vessel-view *ngSwitchCase="'715'" class="container-padding"></app-vessel-view>
+    <app-vessel-list *ngSwitchCase="'716'" class="container-padding"></app-vessel-list>
+    <app-view-documents-folder *ngSwitchCase="'717'" class="container-padding"></app-view-documents-folder>
+    <app-employee-detail-page *ngSwitchCase="'718'" class="container-padding"></app-employee-detail-page>
+    <app-nmr-report *ngSwitchCase="'719'" class="container-padding"></app-nmr-report>
+    <app-change-psw *ngSwitchCase="'720'" class="container-padding"></app-change-psw>
+    <app-master-page-details *ngSwitchCase="'721'" class="container-padding"></app-master-page-details>
+    <app-user-allocation *ngSwitchCase="'722'" class="container-padding"></app-user-allocation>
+    <app-nmr-report-preview *ngSwitchCase="'723'" class="container-padding"></app-nmr-report-preview>
+    <app-nmr-report-edit *ngSwitchCase="'724'" class="container-padding"></app-nmr-report-edit>
+    <app-nmr-report-view-two *ngSwitchCase="'725'" class="container-padding"></app-nmr-report-view-two>
+    <app-nmr-report-view-three *ngSwitchCase="'726'" class="container-padding"></app-nmr-report-view-three>
+    <app-company-creation *ngSwitchCase="'727'" class="container-padding"></app-company-creation>
+    <app-company-listing *ngSwitchCase="'728'" class="container-padding"></app-company-listing>
+    <app-master *ngSwitchCase="'729'" class="container-padding"></app-master>
+    <app-accident-report-editable *ngSwitchCase="'730'" class="container-padding"></app-accident-report-editable>
+    <app-accident-report-preview *ngSwitchCase="'731'" class="container-padding"></app-accident-report-preview>
+    <app-accident-report-preview-closed *ngSwitchCase="'732'"
+        class="container-padding"></app-accident-report-preview-closed>
+    <app-accident-ship-person *ngSwitchCase="'733'" class="container-padding"></app-accident-ship-person>
+    <app-accident3rd-person *ngSwitchCase="'734'" class="container-padding"></app-accident3rd-person>
+    <app-create-employee-popup *ngSwitchCase="'735'" class="container-padding"></app-create-employee-popup>
+    <app-division-master-listing *ngSwitchCase="'736'" class="container-padding"></app-division-master-listing>
+    <app-division-master-details *ngSwitchCase="'737'" class="container-padding"></app-division-master-details>
+    <app-master-skill-page *ngSwitchCase="'738'" class="container-padding"></app-master-skill-page>
+    <app-incident-report *ngSwitchCase="'739'" class="container-padding"></app-incident-report>
+    <app-incident-report-edit *ngSwitchCase="'740'" class="container-padding"></app-incident-report-edit>
+    <app-incident-report-edit-preview-close *ngSwitchCase="'741'"
+        class="container-padding"></app-incident-report-edit-preview-close>
+    <app-incident-report-view *ngSwitchCase="'742'" class="container-padding"></app-incident-report-view>
+    <app-state-master-listing *ngSwitchCase="'743'" class="container-padding"></app-state-master-listing>
+    <app-state-master-details *ngSwitchCase="'744'" class="container-padding"></app-state-master-details>
+    <app-master-skill-listing *ngSwitchCase="'745'" class="container-padding"></app-master-skill-listing>
+    <app-report-listing *ngSwitchCase="'746'" class="container-padding"></app-report-listing>
+    <app-accident-report-listing *ngSwitchCase="'747'" class="container-padding"></app-accident-report-listing>
+    <app-no-data-found *ngSwitchCase="'748'"></app-no-data-found>
+    <app-incident-report-listing *ngSwitchCase="'749'" class="container-padding"></app-incident-report-listing>
+
+    <app-nmr-report-list *ngSwitchCase="'750'" class="container-padding"></app-nmr-report-list>
+    <!-- <app-module-listing-new *ngSwitchCase="'701'"></app-module-listing-new> -->
+    <app-cap-create *ngSwitchCase="'756'" class="container-padding"></app-cap-create>
+    <app-cap-report-list *ngSwitchCase="'763'" class="container-padding"></app-cap-report-list>
+    <app-cap-report-creation *ngSwitchCase="'751'" class="container-padding"></app-cap-report-creation>
+    <app-cap-report-edit *ngSwitchCase="'752'" class="container-padding"></app-cap-report-edit>
+    <app-cap-report-popup *ngSwitchCase="'753'" class="container-padding"></app-cap-report-popup>
+    <app-cap-report-preview *ngSwitchCase="'754'" class="container-padding"></app-cap-report-preview>
+    <app-cap-report-closed *ngSwitchCase="'755'" class="container-padding"></app-cap-report-closed>
+    <app-audit-report-create *ngSwitchCase="'757'" class="container-padding"></app-audit-report-create>
+    <app-audit-report-with-observations *ngSwitchCase="'758'"
+        class="container-padding"></app-audit-report-with-observations>
+    <app-audit-report-edit *ngSwitchCase="'759'" class="container-padding"></app-audit-report-edit>
+    <app-audit-report-preview *ngSwitchCase="'760'" class="container-padding"></app-audit-report-preview>
+    <app-audit-report-closed *ngSwitchCase="'761'" class="container-padding"></app-audit-report-closed>
+    <app-audit-listing *ngSwitchCase="'773'" class="container-padding"></app-audit-listing>
+    <app-todo *ngSwitchCase="'762'" class="container-padding"></app-todo>
+
+    <app-capa-report-creation class="container-padding" *ngSwitchCase="'764'"></app-capa-report-creation>
+    <app-capa-report-preview class="container-padding" *ngSwitchCase="'771'"></app-capa-report-preview>
+    <app-capa-report-edit class="container-padding" *ngSwitchCase="'769'"></app-capa-report-edit>
+    <app-capa-report-list class="container-padding" *ngSwitchCase="'770'"></app-capa-report-list>
+
+    <app-document-list class="container-padding" *ngSwitchCase="'765'"></app-document-list>
+    <app-approval-level-list class="container-padding" *ngSwitchCase="'766'"></app-approval-level-list>
+    <app-approval-list class="container-padding" *ngSwitchCase="'767'"></app-approval-list>
+    <app-manual-listing-edit-mode class="container-padding" *ngSwitchCase="'772'"></app-manual-listing-edit-mode>
+    <app-manual-listing-section-documentation class="container-padding docPadding"
+        *ngSwitchCase="'768'"></app-manual-listing-section-documentation>
+    <app-form-checklist-admin class="container-padding" *ngSwitchCase="'774'"></app-form-checklist-admin>
+    <app-user-side-listing class="container-padding" *ngSwitchCase="'775'"></app-user-side-listing>
+    <app-first-approval-level class="container-padding" *ngSwitchCase="'776'"></app-first-approval-level>
+    <app-country-master-details class="container-padding" *ngSwitchCase="'779'"></app-country-master-details>
+
+    <app-checklist-report-edit class="container-padding" *ngSwitchCase="'777'"></app-checklist-report-edit>
+    <app-approval-history class="container-padding" *ngSwitchCase="'778'"></app-approval-history>
+    <app-checklist-report-creation class="container-padding" *ngSwitchCase="'780'"></app-checklist-report-creation>
+    <app-manual-moderation class="container-padding" *ngSwitchCase="'781'"></app-manual-moderation>
+    <app-manual-moderation class="container-padding" *ngSwitchCase="'786'"></app-manual-moderation>
+    <app-country-listing class="container-padding" *ngSwitchCase="'782'"></app-country-listing>
+    <app-revision-compare class="container-padding" *ngSwitchCase="'783'"></app-revision-compare>
+    <app-form-check-list-user class="container-padding" *ngSwitchCase="'784'"></app-form-check-list-user>
+    <app-open-close-all-status-wise-listing class="container-padding"
+        *ngSwitchCase="'785'"></app-open-close-all-status-wise-listing>
+    <app-person-responsible-view class="container-padding" *ngSwitchCase="'787'"></app-person-responsible-view>
+    <app-participants-view class="container-padding" *ngSwitchCase="'788'"></app-participants-view>
+
+    <app-create-crew-popup class="container-padding" *ngSwitchCase="'789'"></app-create-crew-popup>
+    <app-list-crew class="container-padding" *ngSwitchCase="'790'"></app-list-crew>
+    <app-designation-listing class="container-padding" *ngSwitchCase="'791'"></app-designation-listing>
+    <app-designation-details class="container-padding" *ngSwitchCase="'792'"></app-designation-details>
+    <app-create-crew class="container-padding" *ngSwitchCase="'793'"></app-create-crew>
+    <app-ownership-report class="container-padding" *ngSwitchCase="'794'"></app-ownership-report>
+    <app-crew-list-basedon-vessel class="container-padding" *ngSwitchCase="'795'"></app-crew-list-basedon-vessel>
+
+    <!-- hrms start -->
+    <app-edit-one class="container-padding" *ngSwitchCase="'796'"></app-edit-one>
+    <app-edit-three-month-view class="container-padding" *ngSwitchCase="'798'"></app-edit-three-month-view>
+    <app-edit-tree class="container-padding" *ngSwitchCase="'799'"></app-edit-tree>
+    <app-edit-two class="container-padding" *ngSwitchCase="'800'"></app-edit-two>
+    <app-holiday-plan-list class="container-padding" *ngSwitchCase="'801'"></app-holiday-plan-list>
+    <app-payroll-year-add class="container-padding" *ngSwitchCase="'803'"></app-payroll-year-add>
+    <app-payroll-year-add-sub class="container-padding" *ngSwitchCase="'804'"></app-payroll-year-add-sub>
+    <app-payroll-year-list class="container-padding" *ngSwitchCase="'805'"></app-payroll-year-list>
+    <!-- <app-shift  class="container-padding" *ngSwitchCase="'805'"></app-shift> -->
+    <app-shift-master-details class="container-padding" *ngSwitchCase="'810'"></app-shift-master-details>
+    <app-shift-master-listing class="container-padding" *ngSwitchCase="'811'"></app-shift-master-listing>
+    <app-allowance-master-listing class="container-padding" *ngSwitchCase="'815'"></app-allowance-master-listing>
+    <app-allowance-master-details class="container-padding" *ngSwitchCase="'814'"></app-allowance-master-details>
+    <app-deduction-master-listing class="container-padding" *ngSwitchCase="'817'"></app-deduction-master-listing>
+    <app-deduction-master-details class="container-padding" *ngSwitchCase="'816'"></app-deduction-master-details>
+
+    <!--Leave type-->
+    <app-payroll-leave-type-list class="container-padding" *ngSwitchCase="'812'"></app-payroll-leave-type-list>
+    <app-payroll-leave-type-edit class="container-padding" *ngSwitchCase="'813'"></app-payroll-leave-type-edit>
+
+    <!-- hrms End -->
+    <!-- <app-detention-report-creation class="container-padding" *ngSwitchCase="'806'"></app-detention-report-creation> -->
+    <!-- <app-detention-report-view class="container-padding" *ngSwitchCase="'807'"></app-detention-report-view>
+    <app-detention-report-edit class="container-padding" *ngSwitchCase="'808'"></app-detention-report-edit>
+    <app-detention-report-list class="container-padding" *ngSwitchCase="'809'"></app-detention-report-list> -->
+
+    <app-fleet-master class="container-padding" *ngSwitchCase="'818'"></app-fleet-master>
+    <app-fleet-list class="container-padding" *ngSwitchCase="'819'"></app-fleet-list>
+
+    <!-- Allowance and Deduction start-->
+    <app-salary-template class="container-padding" *ngSwitchCase="'822'"></app-salary-template>
+    <app-salary-template-create class="container-padding" *ngSwitchCase="'823'"></app-salary-template-create>
+    <app-allowance class="container-padding" *ngSwitchCase="'824'"></app-allowance>
+    <app-allowance-create class="container-padding" *ngSwitchCase="'825'"></app-allowance-create>
+    <app-deduction class="container-padding" *ngSwitchCase="'826'"></app-deduction>
+    <app-deduction-create class="container-padding" *ngSwitchCase="'827'"></app-deduction-create>
+    <app-approvals-pending class="container-padding" *ngSwitchCase="'828'"></app-approvals-pending>
+    <!-- Allowance and Deduction End -->
+    <!-- hrms End -->
+
+    <app-detention-report-creation class="container-padding" *ngSwitchCase="'806'"></app-detention-report-creation>
+    <app-detention-report-view class="container-padding" *ngSwitchCase="'807'"></app-detention-report-view>
+    <app-detention-report-edit class="container-padding" *ngSwitchCase="'808'"></app-detention-report-edit>
+    <app-detention-report-list class="container-padding" *ngSwitchCase="'809'"></app-detention-report-list>
+
+    <!-- <app-fleet-master class="container-padding" *ngSwitchCase="'818'"></app-fleet-master>
+    <app-fleet-list class="container-padding" *ngSwitchCase="'819'"></app-fleet-list> -->
+    <!--WFH Start-->
+    <app-wfh-requisition-my-list class="container-padding" *ngSwitchCase="'831'"></app-wfh-requisition-my-list>
+    <app-wfh-requisition-create class="container-padding" *ngSwitchCase="'832'"></app-wfh-requisition-create>
+    <app-wfh-requisition-edit class="container-padding" *ngSwitchCase="'839'"></app-wfh-requisition-edit>
+    <app-wfh-requisition-approval-list class="container-padding"
+        *ngSwitchCase="'840'"></app-wfh-requisition-approval-list>
+    <app-wfh-requisition-approval-list-to-admin class="container-padding"
+        *ngSwitchCase="'841'"></app-wfh-requisition-approval-list-to-admin>
+    <!--WFH end-->
+    <!--Leave Plan Start-->
+    <app-leave-plan class="container-padding" *ngSwitchCase="'842'"></app-leave-plan>
+    <app-add-leave-plan-basic class="container-padding" *ngSwitchCase="'843'"></app-add-leave-plan-basic>
+    <app-edit-leave-plan-basic class="container-padding" *ngSwitchCase="'845'"></app-edit-leave-plan-basic>
+    <!--Leave Plan End-->
+
+    <app-profile-view *ngSwitchCase="'837'" class="container-padding"></app-profile-view>
+    <div *ngSwitchDefault>
+        <app-page-not-found *ngIf="!IsInProgress">Page not found</app-page-not-found>
+    </div>
+    <!-- noon- report -->
+    <app-noon-report-list *ngSwitchCase="'833'" class="container-padding"></app-noon-report-list>
+
+    <app-noon-report-listing *ngSwitchCase="'834'" class="container-padding"></app-noon-report-listing>
+    <app-noon-report-details *ngSwitchCase="'835'" class="container-padding"></app-noon-report-details>
+    <app-ship-status *ngSwitchCase="'836'" class="container-padding"></app-ship-status>
+    <!-- <app-aux-engs-tab-one *ngSwitchCase="'842'" class="container-padding"></app-aux-engs-tab-one> -->
+    <app-bulk-upload-crew class="container-padding" *ngSwitchCase="'838'"></app-bulk-upload-crew>
+    <app-holiday-calender class="container-padding" *ngSwitchCase="'844'"></app-holiday-calender>
+    <app-profile-main class="container-padding" *ngSwitchCase="'846'"></app-profile-main>
+
+    <!--Leave Application start-->
+    <app-hr-all-leave-all class="container-padding" *ngSwitchCase="'820'"></app-hr-all-leave-all>
+    <app-all-leave-all class="container-padding" *ngSwitchCase="'821'"></app-all-leave-all>
+    <app-leave-approvals class="container-padding" *ngSwitchCase="'870'"></app-leave-approvals>
+    <app-leave-request class="container-padding" *ngSwitchCase="'829'"></app-leave-request>
+    <app-my-leaves-dashboard class="container-padding" *ngSwitchCase="'802'"></app-my-leaves-dashboard>
+    <app-leave-preview class="container-padding" *ngSwitchCase="'874'"></app-leave-preview>
+    <!-- <app-leave-preview-approve-or-reject class="container-padding" *ngSwitchCase="'875'"></app-leave-preview-approve-or-reject> -->
+    <!--Leave Application end-->
+    <!--attendance start-->
+    <app-attendance-main-view class="container-padding" *ngSwitchCase="'848'"></app-attendance-main-view>
+    <app-attendance-bulk-import class="container-padding" *ngSwitchCase="'863'"></app-attendance-bulk-import>
+    <app-reporting-attendance-mark class="container-padding" *ngSwitchCase="'830'"></app-reporting-attendance-mark>
+    <!--attendance end-->
+
+    <app-employee-crew-configurations class="container-padding"
+        *ngSwitchCase="'847'"></app-employee-crew-configurations>
+    <app-deficiency-code-master-list class="container-padding" *ngSwitchCase="'849'"></app-deficiency-code-master-list>
+    <app-deficiency-code-master-details class="container-padding"
+        *ngSwitchCase="'850'"></app-deficiency-code-master-details>
+
+    <app-account-group class="container-padding" *ngSwitchCase="'856'"></app-account-group>
+    <app-account-type class="container-padding" *ngSwitchCase="'854'"></app-account-type>
+
+    <!-- inspection report -->
+    <app-inspection-report class="container-padding" *ngSwitchCase="'851'"></app-inspection-report>
+    <app-inspection-report-edit class="container-padding" *ngSwitchCase="'852'"></app-inspection-report-edit>
+    <app-inspection-report-list class="container-padding" *ngSwitchCase="'853'"></app-inspection-report-list>
+
+    <!-- Accounts-->
+
+    <app-chart-of-accounts class="container-padding" *ngSwitchCase="'855'"></app-chart-of-accounts>
+    <app-opening-balance class="container-padding" *ngSwitchCase="'857'"></app-opening-balance>
+    <app-voucher class="container-padding" *ngSwitchCase="'858'"></app-voucher>
+    <app-vendor-general-info class="container-padding" *ngSwitchCase="'869'"></app-vendor-general-info>
+    <app-vender-list-sub class="container-padding" *ngSwitchCase="'876'"></app-vender-list-sub>
+    <app-vender-preview class="container-padding" *ngSwitchCase="'875'"></app-vender-preview>
+
+    <app-inspection-participants-view class="container-padding"
+        *ngSwitchCase="'859'"></app-inspection-participants-view>
+
+    <!-- SMS copy and view -->
+
+    <app-recieve-list class="container-padding" *ngSwitchCase="'871'"></app-recieve-list>
+    <app-recieve-list-shared-history class="container-padding" *ngSwitchCase="'873'"></app-recieve-list-shared-history>
+    <app-received-manual-history class="container-padding" *ngSwitchCase="'872'"></app-received-manual-history>
+
+    <!-- Product -->
+    <app-add-service-form class="container-padding" *ngSwitchCase="'908'">
+    </app-add-service-form>
+    <app-stock-book-vessel class="container-padding" *ngSwitchCase="'937'"></app-stock-book-vessel>
+    <app-stock-book-company class="container-padding" *ngSwitchCase="'936'"></app-stock-book-company>
+    <app-service-list class="container-padding" *ngSwitchCase="'907'"> </app-service-list>
+    <app-product-dangerous-document-removed class="container-padding"
+        *ngSwitchCase="'877'"></app-product-dangerous-document-removed>
+    <app-product-list class="container-padding" *ngSwitchCase="'878'"></app-product-list>
+    <app-product-preview-dangerous-document-removed class="container-padding"
+        *ngSwitchCase="'879'"></app-product-preview-dangerous-document-removed>
+
+    <!-- vessel view contract-->
+    <app-vessel-view-contract class="container-padding" *ngSwitchCase="'1600'"></app-vessel-view-contract>
+
+    <!-- Journal -->
+    <app-new-journal class="container-padding" *ngSwitchCase="'881'"></app-new-journal>
+    <app-new-journal-preview class="container-padding" *ngSwitchCase="'882'"></app-new-journal-preview>
+    <app-journals class="container-padding" *ngSwitchCase="'880'"></app-journals>
+    <!-- <app-balance-sheet class="container-padding" *ngSwitchCase="'880'"></app-balance-sheet> -->
+    <!-- General-Ledger -->
+    <app-general-ledger class="container-padding" *ngSwitchCase="'887'"></app-general-ledger>
+    <app-balance-sheet class="container-padding" *ngSwitchCase="'890'"></app-balance-sheet>
+    <app-trial-balance class="container-padding" *ngSwitchCase="'891'"></app-trial-balance>
+    <app-profit-and-loss class="container-padding" *ngSwitchCase="'892'"></app-profit-and-loss>
+
+    <!-- Item-Request -->
+    <app-item-reques-draft class="container-padding" *ngSwitchCase="'884'"></app-item-reques-draft>
+    <app-item-request-list class="container-padding" *ngSwitchCase="'883'"></app-item-request-list>
+    <app-item-request-details class="container-padding" *ngSwitchCase="'886'"></app-item-request-details>
+    <app-item-request-approver-vessel class="container-padding"
+        *ngSwitchCase="'885'"></app-item-request-approver-vessel>
+
+    <!-- port-master -->
+    <app-port-master-listing *ngSwitchCase="'888'" class="container-padding"></app-port-master-listing>
+    <app-port-master-details *ngSwitchCase="'889'" class="container-padding"></app-port-master-details>
+    <!-- slab -->
+    <app-slab-master *ngSwitchCase="'895'" class="container-padding"></app-slab-master>
+    <app-budget-approval-settings *ngSwitchCase="'929'" class="container-padding"></app-budget-approval-settings>
+
+    <!-- RFQ -->
+    <app-rfq-sent-list class="container-padding" *ngSwitchCase="'893'"></app-rfq-sent-list>
+    <app-rfq-draft-list class="container-padding" *ngSwitchCase="'896'"></app-rfq-draft-list>
+    <app-create-rfq class="container-padding" *ngSwitchCase="'894'"></app-create-rfq>
+    <app-rfq-details class="container-padding" *ngSwitchCase="'1300'"></app-rfq-details>
+    <app-work-order-management class="container-padding" *ngSwitchCase="'941'"></app-work-order-management>
+    <app-assets-inventory class="container-padding" *ngSwitchCase="'940'"></app-assets-inventory>
+    <app-audit-log class="container-padding" *ngSwitchCase="'943'"></app-audit-log>
+    <app-reporting-and-analytics class="container-padding" *ngSwitchCase="'939'"></app-reporting-and-analytics>
+
+    <app-planning-and-scheduling class="container-padding" *ngSwitchCase="'938'"></app-planning-and-scheduling>
+    <!-- <app-planning-and-scheduling class="container-padding" *ngSwitchCase="'938'"></app-planning-and-scheduling> -->
+    <app-inventory-turnover class="container-padding" *ngSwitchCase="'944'"></app-inventory-turnover>
+    <!-- <app-planning-and-scheduling class="container-padding" *ngSwitchCase="'938'"></app-planning-and-scheduling> -->
+    <app-inventory-turnover class="container-padding" *ngSwitchCase="'944'"></app-inventory-turnover>
+    <app-pending-work-detail class="container-padding" *ngSwitchCase="'945'"></app-pending-work-detail>
+    <app-maintenance-execution-documentation class="container-padding" *ngSwitchCase="'946'">
+    </app-maintenance-execution-documentation>
+    <app-contract-management class="container-padding" *ngSwitchCase="'958'"></app-contract-management>
+
+    <!-- inventory routes -->
+    <app-inventory class="container-padding remove-margin" *ngSwitchCase="'938'"></app-inventory>
+    <app-inventory class="container-padding" *ngSwitchCase="'1000'"></app-inventory>
+    <app-equipments class="container-padding" *ngSwitchCase="'1001'"></app-equipments>
+    <app-parts class="container-padding" *ngSwitchCase="'1002'"></app-parts>
+    <app-store class="container-padding" *ngSwitchCase="'1003'"></app-store>
+    <app-oil-process class="container-padding" *ngSwitchCase="'1004'"></app-oil-process>
+    <app-book class="container-padding" *ngSwitchCase="'1005'"></app-book>
+
+    <app-chart class="container-padding" *ngSwitchCase="'1006'"></app-chart>
+    <app-medicine class="container-padding" *ngSwitchCase="'1007'"></app-medicine>
+    <app-bond class="container-padding" *ngSwitchCase="'1008'"></app-bond>
+    <app-provisions class="container-padding" *ngSwitchCase="'1009'"></app-provisions>
+    <app-parts-list class="container-padding" *ngSwitchCase="'1010'"></app-parts-list>
+
+    <app-oil-item class="container-padding" *ngSwitchCase="'1011'"></app-oil-item>
+    <app-books-list class="container-padding" *ngSwitchCase="'1012'"></app-books-list>
+    <app-store-list class="container-padding" *ngSwitchCase="'1013'"></app-store-list>
+    <app-store-item class="container-padding" *ngSwitchCase="'1014'"></app-store-item>
+    <app-store-items-list class="container-padding" *ngSwitchCase="'1015'"></app-store-items-list>
+    <app-medicine-list class="container-padding" *ngSwitchCase="'1016'"></app-medicine-list>
+    <app-chart-list class="container-padding" *ngSwitchCase="'1017'"></app-chart-list>
+
+    <app-view-crew-contract class="container-padding" *ngSwitchCase="'1018'"></app-view-crew-contract>
+
+    <app-purchase class="container-padding" *ngSwitchCase="'961'"></app-purchase>
+
+    <app-pending-work-detail class="container-padding" *ngSwitchCase="'945'"></app-pending-work-detail>
+    <app-maintenance-execution-documentation class="container-padding" *ngSwitchCase="'946'">
+    </app-maintenance-execution-documentation>
+    <app-planned-maintenance class="container-padding" *ngSwitchCase="'970'">
+    </app-planned-maintenance>
+    <app-class-survey-maintenance-planning class="container-padding" *ngSwitchCase="'971'">
+    </app-class-survey-maintenance-planning>
+    <app-parameter-planning class="container-padding" *ngSwitchCase="'972'">
+    </app-parameter-planning>
+    <app-calibration class="container-padding" *ngSwitchCase="'974'">
+    </app-calibration>
+    <app-alertboard class="container-padding" *ngSwitchCase="'975'">
+    </app-alertboard>
+    <app-new-maintenance class="container-padding" *ngSwitchCase="'990'"></app-new-maintenance>
+    <app-add-spare-equipment class="container-padding" *ngSwitchCase="'991'"></app-add-spare-equipment>
+    <app-administration class="container-padding" *ngSwitchCase="'1100'"></app-administration>
+    <app-rights class="container-padding" *ngSwitchCase="'1101'"></app-rights>
+    <app-users-list class="container-padding" *ngSwitchCase="'1102'"></app-users-list>
+    <app-add-user class="container-padding" *ngSwitchCase="'1103'"></app-add-user>
+    <app-update-user class="container-padding" *ngSwitchCase="'1104'"></app-update-user>
+    <app-crew-profile class="container-padding" *ngSwitchCase="'1122'"></app-crew-profile>
+    <app-report-listing *ngSwitchCase="'930'" class="container-padding"></app-report-listing>
+    <app-dashboard-vender class="container-padding" *ngSwitchCase="'1200'"></app-dashboard-vender>
+    <app-rfq-details-vendor class="container-padding" *ngSwitchCase="'1201'"></app-rfq-details-vendor>
+    <app-vender-login class="container-padding" *ngSwitchCase="'1202'"></app-vender-login>
+    <app-home-dashboard class="container-padding" *ngSwitchCase="'701'"></app-home-dashboard>
+    <app-register-company class="container-padding" *ngSwitchCase="'1204'"></app-register-company>
+    <app-rfq class="container-padding" *ngSwitchCase="'1205'"></app-rfq>
+    <app-purchase-order class="container-padding" *ngSwitchCase="'1206'"></app-purchase-order>
+    <app-purchase-order-details class="container-padding" *ngSwitchCase="'1207'"></app-purchase-order-details>
+    <app-qr-contract class="container-padding" *ngSwitchCase="'9999'"></app-qr-contract>
+</ng-container>

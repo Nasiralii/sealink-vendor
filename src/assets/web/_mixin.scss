@@ -1,0 +1,353 @@
+@mixin font-family($size, $font-weight, $line-height) {
+    font-size: $size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+@mixin breakpoint($point) {
+    @if $point == mx325 {
+      @media (max-width: 325px) {
+        @content;
+      }
+    } @else if $point == mx375 {
+      @media (max-width: 375px) {
+        @content;
+      }
+    } @else if $point == mx480 {
+      @media (max-width: 480px) {
+        @content;
+      }
+    } @else if $point == mn481 {
+      @media (min-width: 481px) {
+        @content;
+      }
+    }@else if $point == mx580 {
+      @media (max-width: 580px) {
+        @content;
+      }
+    } @else if $point == mn581 {
+      @media (min-width: 581px) {
+        @content;
+      }
+    }@else if $point == mx680 {
+      @media (max-width: 680px) {
+        @content;
+      }
+    } @else if $point == mn681 {
+      @media (min-width: 681px) {
+        @content;
+      }
+    } @else if $point == mx767 {
+      @media (max-width: 767px) {
+        @content;
+      }
+    } @else if $point == mn768 {
+      @media (min-width: 768px) {
+        @content;
+      }
+    } @else if $point == mx991 {
+      @media (max-width: 991px) {
+        @content;
+      }
+    } @else if $point == mn992 {
+      @media (min-width: 992px) {
+        @content;
+      }
+    } @else if $point == mx1024 {
+      @media (max-width: 1024px) {
+        @content;
+      }
+    } @else if $point == mn1025 {
+      @media (min-width: 1025px) {
+        @content;
+      }
+    } @else if $point == mx1199 {
+      @media (max-width: 1199px) {
+        @content;
+      }
+    } @else if $point == mx1080 {
+      @media (max-width: 1080px) {
+        @content;
+      }
+    } @else if $point == mx1040 {
+      @media (max-width: 1040px) {
+        @content;
+      }
+    } @else if $point == mn1200 {
+      @media (min-width: 1200px) {
+        @content;
+      }
+    } @else if $point == mx1279 {
+      @media (max-width: 1279px) {
+        @content;
+      }
+    } @else if $point == mn1280 {
+      @media (min-width: 1280px) {
+        @content;
+      }
+    } @else if $point == mn1367 {
+      @media (min-width: 1367px) {
+        @content;
+      }
+    } @else if $point == mx1366 {
+      @media (max-width: 1366px) {
+        @content;
+      }
+       } @else if $point == mx1370 {
+      @media (max-width: 1370px) {
+        @content;
+      }
+    } @else if $point == mn1426 {
+      @media (min-width: 1426px) {
+        @content;
+      }
+    }@else if $point == mx1427 {
+      @media (max-width: 1427px) {
+        @content;
+      }
+    } @else if $point == mx1599 {
+      @media (max-width: 1599px) {
+        @content;
+      }
+    } @else if $point == mn1600 {
+      @media (min-width: 1600px) {
+        @content;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+// @mixin breakpoint($point) {
+//   @if $point == mx320 {
+//     @media (max-width: 320px) {
+//       @content;
+//     }
+//   } 
+//   @if $point == mx375 {
+//     @media (max-width: 375px) {
+//       @content;
+//     }
+//   } 
+//   @else if $point == mx420 {
+//     @media (max-width: 420px) {
+//       @content;
+//     }
+//   }@else if $point == mx480 {
+//     @media (max-width: 480px) {
+//       @content;
+//     }
+//   } @else if $point == mn481 {
+//     @media (min-width: 481px) {
+//       @content;
+//     }
+//   } @else if $point == mx575 {
+//     @media (max-width: 575px) {
+//       @content;
+//     }
+//   } @else if $point == mx680 {
+//     @media (max-width: 680px) {
+//       @content;
+//     }
+//   } @else if $point == mn681 {
+//     @media (min-width: 681px) {
+//       @content;
+//     }
+//   } @else if $point == mx767 {
+//     @media (max-width: 767px) {
+//       @content;
+//     }
+//   } @else if $point == mn768 {
+//     @media (min-width: 768px) {
+//       @content;
+//     }
+//   } @else if $point == mx991 {
+//     @media (max-width: 991px) {
+//       @content;
+//     }
+//   } @else if $point == mn992 {
+//     @media (min-width: 992px) {
+//       @content;
+//     }
+//   } @else if $point == mx1023 {
+//     @media (max-width: 1023px) {
+//       @content;
+//     }
+//   } @else if $point == mn1024 {
+//     @media (min-width: 1024px) {
+//       @content;
+//     }
+//   } @else if $point == mx1199 {
+//     @media (max-width: 1199px) {
+//       @content;
+//     }
+//   } @else if $point == mn1200 {
+//     @media (min-width: 1200px) {
+//       @content;
+//     }
+//   } @else if $point == mx1279 {
+//     @media (max-width: 1279px) {
+//       @content;
+//     }
+//   } @else if $point == mn1280 {
+//     @media (min-width: 1280px) {
+//       @content;
+//     }
+//   } @else if $point == mn1367 {
+//     @media (min-width: 1367px) {
+//       @content;
+//     }
+//   } @else if $point == mx1366 {
+//     @media (max-width: 1366px) {
+//       @content;
+//     }
+//   } @else if $point == mx1250 {
+//     @media (max-width: 1250px) {
+//       @content;
+//     }
+//   } 
+//   @else if $point == mx1416 {
+//     @media (max-width: 1416px) {
+//       @content;
+//     }
+//   }
+//   @else if $point == mn1417 {
+//     @media (min-width: 1417px) {
+//       @content;
+//     }
+//   } @else if $point == mx1488 {
+//     @media (max-width: 1488px) {
+//       @content;
+//     }
+  
+//   } @else if $point == mn1489 {
+//     @media (min-width: 1489px) {
+//       @content;
+//     }
+//   } @else if $point == mx1599 {
+//     @media (max-width: 1599px) {
+//       @content;
+//     }
+//   } @else if $point == mn1600 {
+//     @media (min-width: 1600px) {
+//       @content;
+//     }
+//   }
+// }
+
+.row {
+  &.to3px {
+    margin-left: -3px;
+    margin-right: -3px;
+    [class^="col-"] {
+      padding-right: 3px;
+      padding-left: 3px;
+    }
+  }
+  &.to4px {
+    margin-left: -4px;
+    margin-right: -4px;
+    [class^="col-"] {
+      padding-right: 4px;
+      padding-left: 4px;
+    }
+  }
+  &.to6px {
+    margin-left: -6px;
+    margin-right: -6px;
+    [class^="col-"] {
+      padding-right: 6px;
+      padding-left: 6px;
+    }
+  }
+  &.to8px {
+    margin-left: -8px;
+    margin-right: -8px;
+    [class^="col-"] {
+      padding-right: 8px;
+      padding-left: 8px;
+    }
+  }
+  &.to0px {
+    margin-left: 0px;
+    margin-right: 0px;
+    [class^="col"] {
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+  }
+}
+
+
+:root {
+  --primary: #5774F1;
+  --primary-dark: #1D3ECC;
+  --primary-light: #e7dae5;
+  --primary: #5774F1;
+  --theme-black: rgb(24, 24, 24);
+  --fa: #fafafa;
+  --c43: #434343;
+  --c2d: #2d2d2d;
+  --navicon: #707070;
+  --cF6: #f6f8fc;
+  --cF3: #f3f3f3;
+  --c70: #707070;
+  --cEa: #eaf0fb;
+  --cEaa: #aeaeae;
+  --c79: #797979;
+  --c80: #808080;
+  --textColour: var(--c2d);
+  --white: #ffffff;
+  --lightWhite: #f6f8fc;
+  --lightGray: #aeaeae;
+  --lightBorder: #5774f1;
+  --green: #3aa13e;
+  --red: #ee302d;
+  --active: #34b752;
+  --return: #5774f1;
+  --lost: #ee302d;
+  --away: rgb(221, 169, 0);
+  --pending: #ef9e4c;
+  --rejected: #e43629;
+  --cF4: #f4edf3;
+  --cE4: #e49696;
+  --cFF: #ff984a;
+  --cEE: #EED03D;
+  --cF2: #F29423;
+  --cE5: #E5E5E5;
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+}
+
+@mixin font($f-style, $f-size) {
+  @if $f-style == light {
+    font-weight: var(--light);
+    font-size: #{$f-size}px;
+  } @else if $f-style == regular {
+    font-weight: var(--regular);
+    font-size: #{$f-size}px;
+  } @else if $f-style == medium {
+    font-weight: var(--medium);
+    font-size: #{$f-size}px;
+  } @else if $f-style == semiBold {
+    font-weight: var(--semi-bold);
+    font-size: #{$f-size}px;
+  } @else if $f-style == bold {
+    font-weight: var(--bold);
+    font-size: #{$f-size}px;
+  } @else if $f-style == extraBold {
+    font-weight: var(--extra-bold);
+    font-size: #{$f-size}px;
+  }
+}
+
+  

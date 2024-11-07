@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="21" viewBox="0 0 21 21">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_16056" data-name="Rectangle 16056" width="21" height="21" transform="translate(123 3154)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_2" data-name="Mask Group 2" transform="translate(-123 -3154)" clip-path="url(#clip-path)">
+    <g id="Search_results_for_Profile_-_Flaticon-13" data-name="Search results for Profile - Flaticon-13" transform="translate(123 3154)">
+      <path id="Path_88327" data-name="Path 88327" d="M7.875,10.5a5.25,5.25,0,1,0-5.25-5.25,5.25,5.25,0,0,0,5.25,5.25Zm0-8.75a3.5,3.5,0,1,1-3.5,3.5,3.5,3.5,0,0,1,3.5-3.5ZM15.75,20.125a.875.875,0,0,1-1.75,0,6.125,6.125,0,1,0-12.25,0,.875.875,0,0,1-1.75,0,7.875,7.875,0,0,1,15.75,0Zm4.994-7.619a.875.875,0,1,1-1.237,1.237l-1.569-1.569-1.569,1.569a.875.875,0,1,1-1.237-1.237L16.7,10.937,15.131,9.369a.875.875,0,1,1,1.237-1.237L17.938,9.7l1.569-1.569a.875.875,0,1,1,1.237,1.237l-1.569,1.569Z" fill="#247dd4"/>
+    </g>
+  </g>
+</svg>

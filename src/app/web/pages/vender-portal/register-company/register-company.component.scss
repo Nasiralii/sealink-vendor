@@ -1,0 +1,123 @@
+:host ::ng-deep {
+    .p-inputtext  {
+        padding: 5px 14px;
+        width: 100%;
+        height: 50px;
+        border-radius: 7px;
+border: 1px solid  #D0D5DD;
+    }
+    .p-dropdown {
+        width: 100%;
+        height: 50px;
+        border-radius: 7px;
+border: 1px solid  #D0D5DD;
+    }
+    .p-dropdown-label {
+        padding: 14px;
+        border-radius: 0px;
+border: 0px;
+    }
+    .cancel-btn {
+        .p-button {
+            background: #D0D5DD;
+            color: #707070;
+            border: 1px solid #D0D5DD;
+        }
+    }
+.register-main {
+
+    .register-form {
+        border-radius: 7px;
+        margin-top: 16px;
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.08));
+    }
+    .custom-radio-btn {
+        cursor: pointer;
+        label {
+            cursor: pointer;
+        }
+    }
+
+    .label {
+        color: #000;
+        font-weight: 500;
+    }
+    padding: 30px 15px;
+    .back-btn {
+        gap: 12px;
+        font-size: 12px;
+        color: #000;
+        font-weight: 500;
+    }
+    .multi-input {
+
+        div {
+            flex-wrap: nowrap;
+        }
+        .p-inputtext {
+            border-left: 0px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+        .p-dropdown {
+            width: 80px;
+            background: #DDDDDD;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+    }
+    .icon-field {
+        div {
+            position: relative;
+            overflow: hidden;
+            border-radius: 7px;
+            .p-inputtext {
+                padding-left: 60px;
+            }
+            .envelope-icon {
+                position: absolute;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                background: #DDDDDD;
+            }
+        }
+    }
+
+    .fileUpload {
+        width: 100%;
+    border: 1px dashed #D0D5DD;
+    border-radius: 4px;
+    padding: 6px 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    background: #F7F9FA;
+    height: 50px;
+
+    .inputfile {
+        position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    }
+    }
+    .footer-btn {
+        border-top: 1px solid #D0D5DD;
+        margin-top: 34px;
+        padding-top: 24px;
+        width: 100%;
+        .cancel-btn {
+            color: #707070;
+
+        }
+    }
+}
+}

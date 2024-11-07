@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "title": "ABC RACE MANNING SERVICES PVT. LTD. ",
+           "country":"Afghanistan",
+           "status":"true"
+        },
+        {
+            "id": 2,
+            "title": "ABS MARINE SERVICES PVT. LTD ",
+            "country":"Albania",
+            "status":"false"
+      }
+      ,
+        {
+            "id": 3,
+            "title": "ABS MARINE SERVICES PVT. LTD CHENNAI ",
+            "country":"Algeria",
+            "status":"false"
+        
+      }  ,
+      {
+          "id": 4,
+          "title": "ACCORD MARINE MANAGEMENT PVT. LTD. - MUMBAI ",
+          "country":"Andorra",
+          "status":"false"
+      
+    }  ,
+    {
+        "id": 5,
+        "title": "ACCORD MARINE MANAGEMENT PVT. LTD. - GOA",
+          "country":"Argentina",
+          "status":"false"
+    
+  },
+  {
+    "id": 6,
+    "title": "ADARSH SHIP MANAGEMENT (P) LTD.",
+          "country":"Armenia",
+          "status":"true"
+},  {
+    "id": 7,
+    "title": "ADANI SHIPPING (INDIA) PVT. LTD.",
+          "country":"Australia",
+          "status":"true"
+}
+     
+    
+    ]
+  }
+  

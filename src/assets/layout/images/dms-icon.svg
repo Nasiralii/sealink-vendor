@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="24" viewBox="0 0 25 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="24" height="24" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_8264" data-name="Group 8264" transform="translate(-16 -260.4)">
+    <text id="DMS" transform="translate(16 277.4)" fill="#2d2d2d" font-size="11" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">DMS</tspan></text>
+    <g id="Repeat_Grid_1" data-name="Repeat Grid 1" transform="translate(17 260.4)" clip-path="url(#clip-path)">
+      <g id="Group_8251" data-name="Group 8251">
+        <path id="Path_58787" data-name="Path 58787" d="M20.25,11.5H10.41a1.013,1.013,0,0,1-.7-.286L8.29,9.79a.984.984,0,0,0-.7-.29H3.75A.75.75,0,0,1,3,8.75v-6A2.752,2.752,0,0,1,5.75,0h12.5A2.752,2.752,0,0,1,21,2.75v8A.75.75,0,0,1,20.25,11.5Z" fill="#90a4ae"/>
+        <path id="Path_58788" data-name="Path 58788" d="M21.25,9H10.41a.26.26,0,0,1-.17-.07L8.82,7.51A1.733,1.733,0,0,0,7.59,7H2.75A2.748,2.748,0,0,0,0,9.75v11.5A2.748,2.748,0,0,0,2.75,24h18.5A2.748,2.748,0,0,0,24,21.25v-9.5A2.748,2.748,0,0,0,21.25,9Z" fill="#2196f3"/>
+      </g>
+    </g>
+  </g>
+</svg>

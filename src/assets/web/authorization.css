@@ -1,0 +1,573 @@
+:root {
+  --font-theme: #434343;
+}
+
+.loginSeaLink .login-topbar {
+  height: 55px;
+}
+
+.loginSeaLink .login-topbar .logo {
+  padding: 0px 50px;
+}
+
+.loginSeaLink .login-topbar .logo img {
+  width: 122px;
+  height: 55px;
+}
+
+.loginSeaLink .login-image {
+  top: 55px;
+}
+
+.loginSeaLink .loginBg {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 370px 1fr;
+      grid-template-columns: 370px 1fr;
+  width: 100% !important;
+  padding: 18% 0 0 100px;
+}
+
+@media (max-width: 991px) {
+  .loginSeaLink .loginBg {
+    padding: 200px 25px 0 25px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .loginSeaLink .loginBg {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.loginSeaLink .loginBg .grid {
+  display: inline-block;
+  width: 350px;
+}
+
+.loginSeaLink .loginBg .grid .col-12 {
+  padding: 0px 0px;
+  margin-bottom: 12px;
+}
+
+.loginSeaLink .loginBg .grid .col-12 span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginSeaLink .loginBg .grid .col-12 span input {
+  height: 46px;
+  border-radius: 6px;
+}
+
+.loginSeaLink .loginBg .grid .col-12 span input::-webkit-input-placeholder {
+  color: #2D2D2D;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.loginSeaLink .loginBg .grid .col-12 span input:-ms-input-placeholder {
+  color: #2D2D2D;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.loginSeaLink .loginBg .grid .col-12 span input::-ms-input-placeholder {
+  color: #2D2D2D;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.loginSeaLink .loginBg .grid .col-12 span input::placeholder {
+  color: #2D2D2D;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.loginSeaLink .loginBg .grid .col-12 span i {
+  padding: 0 10px;
+  font-size: 1.3rem;
+}
+
+.loginSeaLink .loginBg .grid .col-12 span .p-inputtext {
+  padding-left: 3rem;
+}
+
+.loginSeaLink .loginBg .grid .forgot-container .forgot-psw {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginSeaLink .loginBg .grid .forgot-container .forgot-psw a {
+  color: #2D2D2D;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.loginSeaLink .loginBg .grid .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12px;
+}
+
+.loginSeaLink .loginBg .grid .button-container button {
+  height: 46px;
+  width: 128px;
+  border-radius: 6px;
+  background-color: #5774F1;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.loginSeaLink .loginBg .grid .button-container button span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loginSeaLink .loginBg .grid .login-icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loginSeaLink .loginBg .grid .login-icon-container img {
+  min-width: 137px;
+  height: 67px;
+}
+
+.loginSeaLink .loginBg .grid .logo-container .login-summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26px;
+  color: var(--font-theme);
+  font-family: "Open Sans", sans-serif;
+}
+
+.loginSeaLink .loginBg .grid .logo-container .login-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--font-theme);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 767px) {
+  .loginSeaLink .loginBg .grid {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.loginSeaLink .loginBg .loginBannerArea {
+  height: 395px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../../../src/assets/layout/images/loginBanner.png);
+  background-position: center;
+}
+
+@media (max-width: 991px) {
+  .loginSeaLink .loginBg .loginBannerArea {
+    background-size: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .loginSeaLink .loginBg .loginBannerArea {
+    background-image: none;
+    display: none;
+  }
+}
+
+.loginSeaLink .footer {
+  position: fixed;
+  width: 100%;
+  bottom: 16px;
+}
+
+.loginSeaLink .footer ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.loginSeaLink .footer ul li {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-right: 8px;
+  color: #2D2D2D;
+}
+
+.loginSeaLink .footer ul li a {
+  color: #4854E8;
+  text-decoration: underline;
+}
+
+.loginSeaLink .footer ul li:last-child {
+  margin-right: 0px;
+}
+
+.loginBg2 {
+  height: 100vh;
+}
+
+.loginBg2 .loginBg {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 370px 1fr;
+      grid-template-columns: 370px 1fr;
+  padding: 14% 0 0 100px;
+  width: 1366px;
+  margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+  .loginBg2 .loginBg {
+    padding: 200px 25px 0 25px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .loginBg2 .loginBg {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 40px 10px;
+  }
+}
+
+.loginBg2 .loginBg .grid {
+  display: inline-block;
+  width: 350px;
+}
+
+.loginBg2 .loginBg .grid .col-12 {
+  padding: 0px 0px;
+  margin-bottom: 12px;
+}
+
+.loginBg2 .loginBg .grid .col-12 span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginBg2 .loginBg .grid .col-12 span input {
+  height: 46px;
+  border-radius: 6px;
+}
+
+.loginBg2 .loginBg .grid .col-12 span input::-webkit-input-placeholder {
+  color: #2D2D2D;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.loginBg2 .loginBg .grid .col-12 span input:-ms-input-placeholder {
+  color: #2D2D2D;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.loginBg2 .loginBg .grid .col-12 span input::-ms-input-placeholder {
+  color: #2D2D2D;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.loginBg2 .loginBg .grid .col-12 span input::placeholder {
+  color: #2D2D2D;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.loginBg2 .loginBg .grid .col-12 span i {
+  padding: 0 10px;
+  font-size: 1.3rem;
+}
+
+.loginBg2 .loginBg .grid .col-12 span .p-inputtext {
+  padding-left: 3rem;
+}
+
+.loginBg2 .loginBg .grid .forgot-container .forgot-psw {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginBg2 .loginBg .grid .forgot-container .forgot-psw a {
+  color: #2D2D2D;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.loginBg2 .loginBg .grid .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12px;
+}
+
+.loginBg2 .loginBg .grid .button-container button {
+  height: 46px;
+  width: 128px;
+  border-radius: 6px;
+  background-color: #5774F1;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.loginBg2 .loginBg .grid .button-container button span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loginBg2 .loginBg .grid .login-icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loginBg2 .loginBg .grid .login-icon-container img {
+  min-width: 137px;
+  height: 67px;
+}
+
+.loginBg2 .loginBg .grid .logo-container .logoSec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+.loginBg2 .loginBg .grid .logo-container .login-summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26px;
+  color: var(--font-theme);
+  font-family: "Open Sans", sans-serif;
+}
+
+.loginBg2 .loginBg .grid .logo-container .login-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--font-theme);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 767px) {
+  .loginBg2 .loginBg .grid {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.loginBg2 .loginBg .loginBannerArea {
+  height: auto;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../../../src/assets/layout/images/loginBanner.png);
+  background-position: center;
+  background-size: contain;
+}
+
+@media (max-width: 991px) {
+  .loginBg2 .loginBg .loginBannerArea {
+    background-size: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .loginBg2 .loginBg .loginBannerArea {
+    background-image: none;
+    display: none;
+  }
+}
+
+.loginBg2 .footer {
+  position: fixed;
+  width: 100%;
+  bottom: 16px;
+}
+
+.loginBg2 .footer ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.loginBg2 .footer ul li {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-right: 8px;
+  color: #2D2D2D;
+}
+
+.loginBg2 .footer ul li a {
+  color: #4854E8;
+  text-decoration: underline;
+}
+
+.loginBg2 .footer ul li:last-child {
+  margin-right: 0px;
+}
+/*# sourceMappingURL=authorization.css.map */

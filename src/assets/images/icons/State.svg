@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="21" viewBox="0 0 21 21">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_16054" data-name="Rectangle 16054" width="21" height="21" transform="translate(123 3080)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(-123 -3080)" clip-path="url(#clip-path)">
+    <g id="Search_results_for_Location_-_Flaticon-13" data-name="Search results for Location - Flaticon-13" transform="translate(123 3080)">
+      <path id="Path_88326" data-name="Path 88326" d="M19.111,8.75H17.929a7.848,7.848,0,0,1-.409.95l.728,4.3H13.71l-.813.8.559,4.455H7.545L8.1,14.8,7.29,14H2.753l.765-4.236A7.712,7.712,0,0,1,3.076,8.75H1.889L.013,19.538,0,21H21V19.688ZM5.783,19.25H1.839l.609-3.5H6.186l-.4,3.5Zm9.434,0-.4-3.5h3.739l.609,3.5ZM10.5,14.692l4.33-4.236a6.125,6.125,0,1,0-8.655.006L10.5,14.691ZM7.406,3.031A4.375,4.375,0,0,1,13.6,9.212l-3.1,3.033L7.406,9.219a4.38,4.38,0,0,1,0-6.187Zm.468,3.085A2.625,2.625,0,1,1,10.5,8.741,2.625,2.625,0,0,1,7.874,6.116Z" fill="#247dd4"/>
+    </g>
+  </g>
+</svg>

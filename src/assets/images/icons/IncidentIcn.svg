@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" viewBox="0 0 70 70">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.164" y1="1.081" x2="0.831" y2="0.312" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fc8450"/>
+      <stop offset="1" stop-color="#f0d160"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.147" y1="0.853" x2="0.853" y2="0.147" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5d99ca"/>
+      <stop offset="1" stop-color="#7ed7de"/>
+    </linearGradient>
+  </defs>
+  <g id="Incident_management" data-name="Incident management" transform="translate(-549 -450)">
+    <rect id="Rectangle_15608" data-name="Rectangle 15608" width="70" height="70" rx="6" transform="translate(549 450)" fill="#565656"/>
+    <path id="Path_59281" data-name="Path 59281" d="M1830.321,170.631l6.11,1.949,23.224,27.13L1868,210.329v9.251s-.4,5.529-5.374,5.529h-31.708l-18.582-20.945Z" transform="translate(-1249.106 294.891)" fill="rgba(0,0,0,0.16)"/>
+    <g id="Group_8991" data-name="Group 8991" transform="translate(557.231 466.671)">
+      <g id="_36-risk_monitoring" data-name="36-risk monitoring" transform="translate(4.738 -1.201)">
+        <path id="Path_59278" data-name="Path 59278" d="M50.218,28.972,35.794,6.1a6.584,6.584,0,0,0-5.6-3.091h-.048a6.584,6.584,0,0,0-5.606,3.17L10.559,29.051a6.625,6.625,0,0,0,5.653,10.079h28.4a6.625,6.625,0,0,0,5.6-10.158Z" transform="translate(-9.588 -3.006)" fill="url(#linear-gradient)"/>
+        <path id="Path_59279" data-name="Path 59279" d="M192,96h3.378v10.977H192Z" transform="translate(-172.735 -84.711)" fill="#f5ef9d"/>
+        <ellipse id="Ellipse_77" data-name="Ellipse 77" cx="1.689" cy="1.689" rx="1.689" ry="1.689" transform="translate(19.265 25.644)" fill="#f5ef9d"/>
+        <ellipse id="Ellipse_78" data-name="Ellipse 78" cx="7.977" cy="7.977" rx="7.977" ry="7.977" transform="translate(31.175 24.403)" fill="url(#linear-gradient-2)"/>
+        <path id="Path_59280" data-name="Path 59280" d="M273.936,298.893c-.079-.118-1.962-2.893-4.9-2.893s-4.819,2.775-4.9,2.893a.84.84,0,0,0,0,.932c.079.118,1.962,2.893,4.9,2.893s4.819-2.775,4.9-2.893A.84.84,0,0,0,273.936,298.893Z" transform="translate(-229.887 -266.979)" fill="#c1f1ea"/>
+        <ellipse id="Ellipse_79" data-name="Ellipse 79" cx="2.099" cy="2.099" rx="2.099" ry="2.099" transform="translate(37.053 30.281)" fill="#595d84"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,369 @@
+@import "../../../../assets/web/mixin";
+.layout-sidebar {
+    border-right: 1px solid #dbdde3;
+}
+.vendorDashBoard {
+    padding: 12px 0px;
+
+    .dashboardCardContainer {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0px 0px;
+
+        .dashCards {
+            // width: 243px;
+            height: auto;
+            border: 1px solid #e5e5e5;
+            border-radius: 7px;
+            padding: 16px 18px;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+
+            .icon-span {
+                background-color: #fff;
+                border-radius: 7px;
+                padding: 9px 9px 4px;
+            }
+
+            .rating {
+                border: 1px solid #fff;
+                border-radius: 32px;
+                font-size: 11px;
+                padding: 2px 6px;
+            }
+
+            .dashcardHead {
+                font-size: 14px;
+            }
+
+            .dashcardBody {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 12px;
+
+                .number {
+                    font-size: 32px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .dashCards-one {
+            background: linear-gradient(74deg, #4285f4 -0.7%, #95bdff 98.23%);
+        }
+
+        .dashCards-two {
+            background: linear-gradient(74deg, #fbbc05 6.17%, #ffd867 101.69%);
+        }
+
+        .dashCards-three {
+            background: linear-gradient(75deg, #34a853 1.8%, #5adc7d 98.95%);
+        }
+
+        .dashCards-four {
+            background: linear-gradient(74deg, #eb4335 0.33%, #ffa79f 98.73%);
+        }
+
+        .dashCards-five {
+            background: linear-gradient(74deg, #8642f4 -0.7%, #eabcff 98.23%);
+        }
+
+        .dashCards-six {
+            background: linear-gradient(74deg, #05cffb 6.17%, #83f8ff 101.69%);
+        }
+
+        .dashCards-seven {
+            background: linear-gradient(74deg, #eb4335 0.33%, #ffa79f 98.73%);
+        }
+    }
+
+    .dashBoardBody {
+        margin-top: 20px;
+
+        .togglesec {
+            // max-width: 790px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            // position: absolute;
+            // top:56px;
+            // left: 46px;
+            // z-index: 111;
+            background-color: #ffff;
+            box-shadow: 3px 0px 5px #e6e4e4, -3px 0px 5px #e6e4e4,
+                0px 5px 5px #e6e4e4;
+            margin-bottom: 10px;
+            padding: 16px;
+
+            .labelSec {
+                font-weight: 600;
+            }
+        }
+
+        .sec-head {
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 15px;
+            padding: 8px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px 8px;
+            //    position: relative;
+
+            .searchgrp {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 4px;
+
+                @include breakpoint(mx480) {
+                    flex-wrap: wrap;
+                }
+            }
+
+            .sec-headLeft {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 8px 8px;
+
+                .heading {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+:host ::ng-deep {
+    .p-tabview .p-tabview-panels {
+        border: 1px solid #e5e5e5;
+        border-radius: 6px;
+        padding: 16px !important;
+    }
+
+    .p-tabview .p-tabview-nav {
+        border: none !important;
+    }
+
+    .sec-headLeft .p-inputtext {
+        width: 290px;
+        height: 36px;
+
+        @include breakpoint(mx680) {
+            width: 200px;
+        }
+
+        @include breakpoint(mx375) {
+            width: 130px;
+        }
+    }
+
+    .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+        background: none !important;
+    }
+
+    .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+        background-color: rgba(227, 233, 255, 0.96) !important;
+    }
+}
+
+.arowdown {
+    svg {
+        transform: rotate(180deg);
+
+        g {
+            fill: #4854e8;
+        }
+    }
+}
+
+.steps {
+    gap: 12px;
+    position: relative;
+}
+
+.status-rounded {
+    width: 40px;
+    height: 40px;
+    background-color: #34b752;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-complete {
+    background-color: #ecfbef;
+    color: #34b752;
+    display: flex;
+    font-weight: 500;
+    padding: 5px 26px;
+    border-radius: 50px;
+}
+
+.step-num {
+    color: #707070;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.step-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #2d2d2d;
+}
+
+.border-line {
+    position: absolute;
+    width: 92%;
+    height: 5px;
+    background: #34b752;
+    top: 18px;
+    right: 0;
+    display: block;
+}
+
+.step2 {
+    .status-rounded {
+        background-color: #5774f1;
+    }
+
+    .border-line {
+        background-color: #dddddd;
+    }
+
+    .border-line::after {
+        position: absolute;
+        content: "";
+        height: 5px;
+        width: 50%;
+        background-color: #5774f1;
+    }
+
+    .step-title {
+        color: #5774f1;
+    }
+
+    .status-complete {
+        color: #5774f1;
+        background: #ecedfc;
+    }
+}
+
+.step3 {
+    .status-rounded {
+        background-color: #fafafa;
+    }
+
+    .step-num {
+        color: #dddddd;
+    }
+
+    .step-title {
+        color: #dddddd;
+    }
+
+    .status-complete {
+        color: #dddddd;
+        background: #f5f5f5;
+    }
+}
+
+.dashBoardBody,
+.dashboardCardContainer {
+    border: 1px solid #dbdde3;
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.05));
+    border-radius: 5px;
+    // padding: 20px 24px;
+}
+
+.step-main-title {
+    h4 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    p {
+        margin-bottom: 40px;
+    }
+}
+.search-icon {
+    height: 40px;
+    width: 45px;
+    background: #dbdde3;
+    position: relative;
+    right: -6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-bar {
+    display: flex;
+    background: white;
+    width: 523px;
+    border: 1px solid #dbdde3;
+    padding-left: 10px;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 7px;
+}
+input {
+    width: 100%;
+}
+input {
+    border: none !important;
+}
+:host ::ng-deep input:focus-visible {
+    border: none !important;
+    outline: none !important;
+}
+.filter {
+    margin-left: 88px;
+    width: 520px;
+    border-radius: 7px;
+    border: 1px solid #dbdde3;
+    background: white;
+    box-shadow: #707070;
+    font-size: 12px;
+}
+
+.custome-btn {
+    background: #dbdde380;
+    padding: 10px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+:host ::ng-deep .drop-down .p-dropdown {
+    border: none !important;
+    font-size: 12px;
+}
+
+.bi-caret-down-fill {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* Smooth transition for rotation */
+}
+
+/* Class applied when the dropdown is open */
+.rotate-icon {
+    cursor: pointer;
+    transform: rotate(180deg);
+    /* Rotate the icon 180 degrees */
+}
+
+:host ::ng-deep .drop-down .p-dropdown {
+    border: none !important;
+    font-size: 12px;
+}
